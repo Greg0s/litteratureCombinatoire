@@ -7,6 +7,9 @@
 
 body{
     font-family: 'Nunito', sans-serif;
+    background-color: aqua;
+    padding: 0;
+    margin: 0;
 }
 
 /*
@@ -23,12 +26,14 @@ body{
 header {
     overflow: hidden;
     background-color: #ffffff;
-    padding: 10px;
     margin: auto;
-    width: 95%;
+    width: 100%;
     font-family: 'Sora', sans-serif;
     /* border-bottom : 1px solid; */
+    top : 0;
+    position: absolute;
 }
+
 
 /* All header links (tab + logo)*/
 header a{
@@ -59,6 +64,17 @@ header a.active {
 .firstBar{
     text-transform: uppercase;
     font-size: 1.2em;
+    padding-bottom: 1.2em;
+    padding-top : 0.5em;
+}
+
+.firstBar::before{
+    content : "";
+    position: absolute;
+    left    : 2.5%;
+    top : 57px;
+    width   : 95%;  /* or 100px */
+    border-bottom:1px solid black;
 }
 
 
@@ -67,12 +83,6 @@ header a.logo {
     font-size: 2em;
     font-weight: bold;
     font-family: 'Major Mono Display', monospace;
-}
-
-.firstBar{
-    border-bottom : 1px solid;
-    padding-bottom: 1.2em;
-    padding-top : 0.5em;
 }
 
 /* Just the tabs */
@@ -89,12 +99,20 @@ navbar{
     font-size: 1.2em;
     justify-content: space-around;
     text-transform: initial;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     padding: 0.5em;
     display: none;
     background-color: white;
     margin : auto;
-    z-index: 1;
+}
+
+.secondBar::before{
+    content : "";
+    position: absolute;
+    left    : 2.5%;
+    bottom :0;
+    width   : 95%;  /* or 100px */
+    border-bottom:1px solid black;
 }
 
 .visible{/*activated by jquery on .secondBar*/
@@ -123,6 +141,57 @@ navbar{
     display: none;
 }
 
+/*~~~~~~~~~~~~~~~~Hamburger menu~~~~~~~~~~~~~~~~*/
+.sidenav {
+    height:5.5em;
+    width: 80%;
+    position: fixed;
+    z-index: 1;
+    right: -100%;
+    background-color: white;
+    transition: right 0.5s ease;
+    list-style-type: none;
+    padding: 1em;
+    margin: 0;
+    top : 77px;
+  }
+  
+/* Sidenav menu links */
+.sidenav a.navlink {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #111;
+}
+
+/* Active class */
+.sidenav.active {
+    right: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    display: block;
+}
+  
+.icon {
+    display: block;
+    width: 30px;
+    right: 15px;
+    top : 15px;
+    position: absolute;
+}
+
+.cross-icon, .burger-icon{
+    display: none;
+}
+
 /* Add media queries for responsiveness */
 @media screen and (max-width: 930px) {
     header .logo{
@@ -134,15 +203,19 @@ navbar{
         text-align: left;
     }
     navbar{
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: flex-end;
+        align-items: flex-end; */
+        display: none;
     }
     header-right {
         float: none;
     }
     .secondBarMobile{
         display: inline;
+    }
+    .burger-icon{
+        display: block;
     }
 }
