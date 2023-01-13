@@ -1,3 +1,3 @@
-# Littérature & combinatoire
+# Littérature & combinatoire - Front end
 
 Par Emma Veauvy, Juliette Jeannin, Lucie Augier, Grégoire Tinnes
