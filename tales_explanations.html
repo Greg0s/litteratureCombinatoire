@@ -5,19 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMBIMAC</title>
+    <link rel="stylesheet" href='assets/css/style.css'>
+    <link rel="stylesheet" href='assets/css/background.css'>
     <link rel="stylesheet" href='assets/css/tales.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style> 
         @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap'); 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
 </head>
 <body>
+    <header>
+        <div class="firstBar">
+            <a href="#" class="logo">CoMBIMaC</a>
+            <navbar>
+                <div class="dropbtn">Littérature & combinatoire
+                    <img class="underDropbtn" src="assets/svg/arrowUp.svg"/>
+                </div>
+
+                <a class="navlink" href="#">Exposition</a>
+                <a class="navlink" href="#">Projets finaux</a>
+            </navbar>
+            <div id="mySidenav" class="sidenav">
+                <a id="dropdown" href="#">Littérature & combinatoire</a>
+                <div id="mySecondBarMobile" class="secondBarMobile">
+                    <a class="navlink-mobile" href="#">Haïkus</a>
+                    <a class="navlink-mobile" href="#">Narration</a>
+                    <a class="navlink-mobile" href="#">Bristols</a>
+                    <a class="navlink-mobile" href="#">Conte à votre façon</a>
+                    <a class="navlink-mobile" href="#">Sonnets</a>
+                </div>
+                <a href="#" id="openBtnMobile">
+                    <img class="arrow-down" alt="Open dropdown mobile menu" src="assets/svg/arrowDown.svg"/>
+                </a>
+                <a href="#" id="closeBtnMobile">
+                    <img class="arrow-up" alt="Close dropdown mobile menu" src="assets/svg/arrowUp.svg"/>
+                </a>
+                <a class="navlink-mobile" href="#">Exposition</a>
+                <a class="navlink-mobile" href="#">Projets finaux</a>
+            </div> 
+            <a href="#" id="openBtn">
+                <img class="burger-icon icon" alt="Open mobile menu" src="assets/svg/hamburger.svg"/>
+            </a>
+            <a href="#" id="closeBtn">
+                <img class="cross-icon icon" alt="Close mobile menu" src="assets/svg/cross.svg"/>
+            </a>
+        </div>
+        <div class="secondBar">
+            <a class="navlink" href="#">Haïkus</a>
+            <a class="navlink" href="#">Narration</a>
+            <a class="navlink" href="#">Bristols</a>
+            <a class="navlink" href="#">Conte à votre façon</a>
+            <a class="navlink" href="#">Sonnets</a>
+        </div>
+    </header>
+
     <div class="explanation">
         <h1>CoNTe à</h1>
         <h1>vOTRe FAçoN</h1>
         <p>Jouez au conte à votre façon, une histoire à choix dont vous êtes le héros. </p>
         <p>Concept inspiré par <i>Conte à votre façon</i> de Raymond Queneau.</p>
     </div>
+
+    <div class="cercles">
+        <div class="circle-shadow box bouge slow cercle1"></div>
+        <div class="circle-shadow box bouge slow cercle2"></div>
+    </div>
+    <div class="containeurFleche">
+        <svg class="svgFleche" width="150" height="24" viewBox="0 0 86 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="fleche" d="M85.0607 13.0607C85.6464 12.4749 85.6464 11.5251 85.0607 10.9393L75.5147 1.3934C74.9289 0.807611 73.9792 0.807611 73.3934 1.3934C72.8076 1.97919 72.8076 2.92893 73.3934 3.51472L81.8787 12L73.3934 20.4853C72.8076 21.0711 72.8076 22.0208 73.3934 22.6066C73.9792 23.1924 74.9289 23.1924 75.5147 22.6066L85.0607 13.0607ZM0 13.5H84V10.5H0V13.5Z" fill="black"/>
+        </svg>
+    </div>
+    
 </body>
 </html>
+
+<script type="text/javascript" src="assets/js/scriptAnimCercles.js"></script> 
