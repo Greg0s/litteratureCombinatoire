@@ -5,17 +5,36 @@
 
 h1 {
     font-family: 'Major Mono Display', monospace;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 0.4em;
     text-align: center;
 }
 
 p {
     font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    max-width: 900px;
     margin: auto;
     text-align: center;
 }
 
 .explanation {
     margin-top: 40vh;
+}
+
+.game {
+    margin-top: 150px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-child {
+    max-width: 500px;
+}
+
+.space {
+    margin-bottom: 65px;
 }
