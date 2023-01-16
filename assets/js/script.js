@@ -3,12 +3,15 @@ $(document).ready(function(){
   //~~~~~~~~~~~~~~~~Header second bar
   $('.dropbtn, .secondBar, .dropbtn::before').hover(function() {
     if( $("body").innerWidth() > 930){
-      $('.secondBar').addClass('visible');
+      $('.secondBar').addClass('secondBar-visible');
+      $('.underDropbtn').addClass('underDropbtn-visible');
     }
   },
 
   function() {  // mouse out
-      $('.secondBar').removeClass('visible');
+      $('.secondBar').removeClass('secondBar-visible');
+      $('.underDropbtn').removeClass('underDropbtn-visible');
+
   });
 
   //~~~~~~~~~~~~~~Hamburger menu
