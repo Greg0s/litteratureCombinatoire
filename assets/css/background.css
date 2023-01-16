@@ -1,0 +1,68 @@
+.cercles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.circle-shadow {
+    margin: auto auto;
+    height: 15vh;
+    width: 15vh;
+    background: #FFD6A5;
+    border-radius: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 0px #FFD6A5;
+}
+
+.cercle1{
+    margin-left: 35vw;
+    
+    animation-name: cercle1;
+}
+
+.cercle2{
+
+    margin-right: 32vw;
+    animation-name: cercle2;
+}
+
+.box {
+    position: absolute; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.slow {
+    animation-duration: 10s;
+}
+
+
+@keyframes cercle2 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(-5vw) translateY(5vw);
+    } 
+    100% {
+        transform: translateX(0) translateY(-5vw);
+    }
+}
+
+@keyframes cercle1 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
+
+}
