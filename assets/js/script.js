@@ -1,16 +1,17 @@
 $(document).ready(function(){  
 
-  $('.dropbtn, .secondBar, .dopbtn::before').hover(function() {
+  //~~~~~~~~~~~~~~~~Header second bar
+  $('.dropbtn, .secondBar, .dropbtn::before').hover(function() {
     if( $("body").innerWidth() > 930){
       $('.secondBar').addClass('visible');
     }
   },
 
-  // mouse out
-  function() {
+  function() {  // mouse out
       $('.secondBar').removeClass('visible');
   });
 
+  //~~~~~~~~~~~~~~Hamburger menu
   var sidenav = document.getElementById("mySidenav");
   var openBtn = document.getElementById("openBtn");
   var closeBtn = document.getElementById("closeBtn");
@@ -18,18 +19,53 @@ $(document).ready(function(){
   openBtn.onclick = openNav;
   closeBtn.onclick = closeNav;
 
-  /* Set the width of the side navigation to 250px */
   function openNav() {
     sidenav.classList.add("active");
     $('.cross-icon').show();
     $('.burger-icon').hide();
   }
 
-  /* Set the width of the side navigation to 0 */
   function closeNav() {
     sidenav.classList.remove("active");
     $('.cross-icon').hide();
     $('.burger-icon').show();
+  }
+
+  //~~~~~~~~~~~~~~~~~Hamburger dropdown
+  var secondBarMobile = document.getElementById("mySecondBarMobile");
+  var openBtnMobile = document.getElementById("openBtnMobile");
+  var closeBtnMobile = document.getElementById("closeBtnMobile");
+  var dropdownBtnMobile = document.getElementById("dropdown");
+  let open = false;
+  
+  openBtnMobile.onclick = openDropdown;
+  closeBtnMobile.onclick = closeDropdown;
+  dropdownBtnMobile.onclick = clickDropdown;
+
+  function openDropdown() {
+    secondBarMobile.classList.add("activeBurger");
+    $('.arrow-up').show();
+    $('.arrow-down').hide();
+    let height = sidenav.style.height;
+    sidenav.style.height = `${height}px`;
+  }
+
+  function closeDropdown() {
+    secondBarMobile.classList.remove("activeBurger");
+    $('.arrow-up').hide();
+    $('.arrow-down').show();
+    let height = sidenav.style.height;
+    sidenav.style.height = `${height}px`;
+  }
+
+  function clickDropdown() {
+    if(open == false){
+      openDropdown();
+      open = true;
+    }else{
+      closeDropdown();
+      open = false;
+    }
   }
 
 })
