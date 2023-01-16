@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Major Mono Display', monospace;
+    src: url();
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 80px;
+    line-height: 0.4em;
+    text-align: center;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+.explanation {
+    margin-top: 35vh;
+}
