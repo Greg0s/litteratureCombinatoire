@@ -9,7 +9,8 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    height: 100vh;
+    width: 100%;
+    z-index: auto;
 }
 
 
@@ -73,23 +74,4 @@ body{
 }
 
 
-.containeurFleche{
-    display: inline-flex;
-    justify-content: center;
-    width: 100%;
-  position: relative;
-  top: -35vh;
-  overflow: visible;
- 
-}
-
-.fleche{
-    transition: all 1s;
-    fill: black;
-
-}
-
-.svgFleche:hover .fleche{
-    transform: translateX(20px);
-}
 

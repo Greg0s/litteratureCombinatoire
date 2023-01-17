@@ -20,6 +20,8 @@ p {
 
 .explanation {
     margin-top: 40vh;
+    position: relative;
+    z-index: 2;
 }
 
 .game {
@@ -37,4 +39,23 @@ p {
 
 .space {
     margin-bottom: 65px;
+}
+
+.arrow-right-containeur{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 6vh;
+    overflow: visible;
+ 
+}
+
+.arrow-right{
+    transition: all 1s;
+    fill: black;
+}
+
+.arrow-rigth-SVG:hover .arrow-right{
+    transform: translateX(20px);
 }
