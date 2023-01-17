@@ -1,0 +1,25 @@
+section{
+    margin-top: 5em;
+    width: 70%;
+    margin: auto;
+}
+
+.grid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.projectText{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.projectTitle{
+    font-family: 'Sora', sans-serif;
+}
+
+.projectAuthor{
+    font-style: italic;
+}

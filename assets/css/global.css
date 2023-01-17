@@ -10,26 +10,34 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
+body{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/*~~~~~~~~~~~Font~~~~~~~~~~~*/
+
 h1, h2{
     font-family: 'Major Mono Display', monospace;
 }
 
 h1{
-    font-size: 6.7em;/*80pt*/
+    font-size: 4rem;/*80pt*/
 }
 
 h2{
-    font-size : 2em;/*40pt*/
+    font-size : 2rem;/*40pt*/
 }
 
 h3{
     font-family: 'Sora', sans-serif;
-    font-size: 1.2em;/*40pt*/
+    font-size: 1.2rem;/*40pt*/
     font-weight: 400;/*regular*/
 }
 
 p{
     font-family: 'Nunito', sans-serif;
-    font-size: 2.1em;/*25pt*/
+    font-size: 1rem;/*25pt*/
     font-weight: 400;/*regular*/
 }
