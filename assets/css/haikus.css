@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Major Mono Display', monospace;
+    src: url();
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 70px;
+    line-height: 0.4em;
+    text-align: center;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.game {
+    position: relative;
+    z-index: 2;
+    margin-top: 150px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-child{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.underline{
+    text-decoration: underline;
+    text-underline-offset: 5vh;
+}
+
+footer{
+    position: relative;
+    z-index: 3;
+}
+
+.space {
+    margin-bottom: 65px;
+}
+
+.arrow-right-containeur{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 6vh;
+    overflow: visible;
+ 
+}
+
+.arrow-right{
+    transition: all 1s;
+    fill: black;
+}
+
+.arrow-rigth-SVG:hover .arrow-right{
+    transform: translateX(20px);
+}
