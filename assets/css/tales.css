@@ -1,3 +1,5 @@
+/* ~~~~~ TEXTS ~~~~~ */
+
 @font-face {
     font-family: 'Major Mono Display', monospace;
     src: url();
@@ -18,10 +20,33 @@ p {
     text-align: center;
 }
 
+/* ~~~~~ OPTIONS/BUTTONS ~~~~~ */
+
+.option {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.secondary {
+    border-width: 1px;
+}
+
+.option:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+/* ~~~~~ CONTAINERS ~~~~~ */
+
 .game {
     position: relative;
     z-index: 2;
-    margin-top: 150px;
+    margin-top: 175px;
 }
 
 .flex {
@@ -30,14 +55,9 @@ p {
 }
 
 .flex-child{
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    border: 1px dotted black;
+    padding: 10px;
     max-width: 500px;
-}
-
-.underline{
-    text-decoration: underline;
-    text-underline-offset: 5vh;
 }
 
 footer{
@@ -45,6 +65,8 @@ footer{
     z-index: 3;
 }
 
+/* ~~~~~ MARGINS/SPACES ~~~~~ */
+
 .space {
-    margin-bottom: 65px;
+    margin-bottom: 70px;
 }
