@@ -13,7 +13,7 @@ h1 {
 p {
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
     text-align: center;
 }
@@ -30,9 +30,8 @@ p {
 }
 
 .flex-child{
-    padding-top: 3vh;
-    padding-bottom: 3vh;
-    max-width: 500px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .underline{
@@ -47,4 +46,23 @@ footer{
 
 .space {
     margin-bottom: 65px;
+}
+
+.arrow-right-containeur{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 6vh;
+    overflow: visible;
+ 
+}
+
+.arrow-right{
+    transition: all 1s;
+    fill: black;
+}
+
+.arrow-rigth-SVG:hover .arrow-right{
+    transform: translateX(20px);
 }

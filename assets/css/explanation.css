@@ -13,14 +13,18 @@ h1 {
 p {
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
     text-align: center;
 }
 
-.game {
+.explanation {
+    margin-top: 40vh;
     position: relative;
     z-index: 2;
+}
+
+.game {
     margin-top: 150px;
 }
 
@@ -29,22 +33,29 @@ p {
     justify-content: space-around;
 }
 
-.flex-child{
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+.flex-child {
     max-width: 500px;
-}
-
-.underline{
-    text-decoration: underline;
-    text-underline-offset: 5vh;
-}
-
-footer{
-    position: relative;
-    z-index: 3;
 }
 
 .space {
     margin-bottom: 65px;
+}
+
+.arrow-right-containeur{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 6vh;
+    overflow: visible;
+ 
+}
+
+.arrow-right{
+    transition: all 1s;
+    fill: black;
+}
+
+.arrow-rigth-SVG:hover .arrow-right{
+    transform: translateX(20px);
 }
