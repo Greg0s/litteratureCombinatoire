@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Major Mono Display', monospace;
+    src: url();
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 70px;
+    line-height: 0.4em;
+    text-align: center;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.game {
+    position: relative;
+    z-index: 2;
+    margin-top: 150px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-child{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    max-width: 500px;
+}
+
+.underline{
+    text-decoration: underline;
+    text-underline-offset: 5vh;
+}
+
+footer{
+    position: relative;
+    z-index: 3;
+}
+
+.space {
+    margin-bottom: 65px;
+}
