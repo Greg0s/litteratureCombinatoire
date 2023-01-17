@@ -1,24 +1,21 @@
-/*~~~~~~~~~~~General CSS~~~~~~~~~~~*/
-
-@font-face {
-    font-family: 'Major Mono Display', monospace;
-    src: url();
-}
-
-body{
-    font-family: 'Nunito', sans-serif;
-    background-color: aqua;
-    padding: 0;
-    margin: 0;
-}
-
 /*
+~~~~~~~~~~~~~~Font family~~~~~~~~~~~~~~~~~~~~ 
     font-family: 'Major Mono Display', monospace;
 
     font-family: 'Nunito', sans-serif;
 
     font-family: 'Sora', sans-serif;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
+
+/*~~~~~~~~~~~General CSS~~~~~~~~~~~*/
+
+body{
+    font-family: 'Nunito', sans-serif;
+    /* background-color: aqua; */
+    padding: 0;
+    margin: 0;
+}
 
 /*~~~~~~~~~~~~~Header~~~~~~~~~~~~~~*/
 
@@ -32,6 +29,7 @@ header {
     /* border-bottom : 1px solid; */
     top : 0;
     position: absolute;
+    padding: 1.5em 0 0 0;
 }
 
 
@@ -64,17 +62,17 @@ header a.active {
 .firstBar{
     text-transform: uppercase;
     font-size: 1.2em;
-    padding-bottom: 1.2em;
-    padding-top : 0.5em;
+    padding : 0.5em 0 1.25em 0;
 }
 
 .firstBar::before{
     content : "";
-    position: absolute;
+    position: relative;
     left    : 2.5%;
-    top : 57px;
+    top : 49px;
     width   : 95%;  /* or 100px */
     border-bottom:1px solid black;
+    display: block;
 }
 
 
@@ -83,6 +81,7 @@ header a.logo {
     font-size: 2em;
     font-weight: bold;
     font-family: 'Major Mono Display', monospace;
+    margin-left: 1.1em;
 }
 
 /* Just the tabs */
@@ -100,10 +99,11 @@ navbar{
     justify-content: space-around;
     text-transform: initial;
     /* border-bottom: 1px solid black; */
-    padding: 0.5em;
+    padding: 1em 0 1em 0;
     display: none;
     background-color: white;
     margin : auto;
+    /* margin: 1.7em 0 1em 0; */
 }
 
 .secondBar::before{
@@ -113,9 +113,10 @@ navbar{
     bottom :0;
     width   : 95%;  /* or 100px */
     border-bottom:1px solid black;
+    
 }
 
-.visible{/*activated by jquery on .secondBar*/
+.secondBar-visible{/*activated by jquery on .secondBar*/
     display: flex !important;
     justify-content: space-around;
 }
@@ -126,6 +127,19 @@ navbar{
   outline: none;
   background-color: inherit;
   margin: 0; /* Important for vertical align on mobile phones */
+  display: flex;
+  justify-content: center;
+}
+
+.underDropbtn{
+    width: 12px;
+    position: absolute;
+    bottom: 3.3em;
+    display: none;
+}
+
+.underDropbtn-visible{
+    display: inline;
 }
 
 /*used as hover space*/
@@ -138,12 +152,12 @@ navbar{
 }
 
 .secondBarMobile{
-    display: none;
+    color : black;
+    /* display: none; */
 }
 
 /*~~~~~~~~~~~~~~~~Hamburger menu~~~~~~~~~~~~~~~~*/
 .sidenav {
-    height:5.5em;
     width: 80%;
     position: fixed;
     z-index: 1;
@@ -151,22 +165,19 @@ navbar{
     background-color: white;
     transition: right 0.5s ease;
     list-style-type: none;
-    padding: 1em;
+    padding: 1em 2.5em 1em 1em;
+
     margin: 0;
-    top : 77px;
+    top : 83px;
   }
   
 /* Sidenav menu links */
 .sidenav a.navlink {
     text-decoration: none;
     font-size: 25px;
-    color: white;
+    color: black;
     display: block;
     transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #111;
 }
 
 /* Active class */
@@ -181,10 +192,9 @@ navbar{
 }
   
 .icon {
-    display: block;
     width: 30px;
     right: 15px;
-    top : 15px;
+    top : 30px;
     position: absolute;
 }
 
@@ -192,7 +202,52 @@ navbar{
     display: none;
 }
 
-/* Add media queries for responsiveness */
+/*dropdown burger*/
+
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.secondBarMobile {
+    display: none;
+    margin-left: 50px;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.navlink-mobile:first-of-type{
+    margin-top: 0;
+}
+
+.navlink-mobile:last-of-type{
+    margin-bottom: 0;
+}
+
+.secondBarMobile .navlink-mobile{
+    margin-left : 3em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navlink-mobile{
+    margin : 1em 0 1em 0;
+}
+
+.secondBarMobile.activeBurger{
+    display: inline;
+}
+
+.arrow-down, .arrow-up{
+    display: none;
+    max-height: 18px;
+    right: 10%;
+    top : 21px;
+    position: absolute;
+    z-index: 2;
+}
+
+
+/* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */
 @media screen and (max-width: 930px) {
     header .logo{
         text-align: left;
@@ -212,10 +267,13 @@ navbar{
     header-right {
         float: none;
     }
-    .secondBarMobile{
+    /* .secondBarMobile{
         display: inline;
-    }
+    } */
     .burger-icon{
+        display: block;
+    }
+    .arrow-down{
         display: block;
     }
 }
