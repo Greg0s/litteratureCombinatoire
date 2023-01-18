@@ -37,8 +37,8 @@ p {
 /* ~~~~~ DECORATIONS ~~~~~ */
 
 .underline{
-    text-decoration: underline;
-    text-underline-offset: 5vh;
+    max-width: 50%;
+    border-top: 1px solid #000;
 }
 
 
@@ -52,7 +52,7 @@ p {
 }
 
 .cercle1{
-    margin-left: 85vw;
+   left: 85%;
 }
 
 /* ~~~~~ MARGINS/SPACES ~~~~~ */

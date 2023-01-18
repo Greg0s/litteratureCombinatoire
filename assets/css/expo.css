@@ -1,0 +1,47 @@
+.ligne{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em;
+}
+
+img{
+ 
+    height: auto;
+    object-fit: cover;
+}
+
+.ligne p{
+    width: 50%;
+    text-align: justify;
+}
+
+.cercles{
+    justify-content: space-between;
+}
+
+.circle-shadow{
+    height: 10vh;
+    width: 10vh;
+}
+
+.cercle1{
+   left: 85%;
+}
+
+section{
+    z-index: 2;
+    position: relative;
+}
+
+
+@media screen and (max-width: 880px) {
+   
+    .ligne {
+        flex-direction: column;
+    }
+
+    .ligne p{
+        width: 100%;
+    }
+   
+}
