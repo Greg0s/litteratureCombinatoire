@@ -5,6 +5,15 @@
     gap : 2em;
 }
 
+.grid{
+    margin-top: 2em;
+}
+
+.project{
+    text-decoration: none;
+    color: black;
+}
+
 .projectText{
     display: flex;
     flex-direction: column;
@@ -13,10 +22,16 @@
 
 .projectTitle{
     font-family: 'Sora', sans-serif;
+    font-size: 1.2rem;
 }
 
 .projectAuthor{
     font-style: italic;
+}
+
+.project:hover{
+    background-color: black;
+    color: white;
 }
 
 @media screen and (max-width: 930px) {
