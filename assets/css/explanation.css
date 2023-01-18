@@ -4,28 +4,24 @@
 }
 
 h1 {
-    font-family: 'Major Mono Display', monospace;
-    font-size: 70px;
     line-height: 0.4em;
     text-align: center;
 }
 
 p {
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-    max-width: 900px;
+    max-width: 80%;
     margin: auto;
     text-align: center;
 }
 
 .explanation {
-    margin-top: 40vh;
+    margin-top: 15.5em;
     position: relative;
     z-index: 2;
 }
 
 .game {
-    margin-top: 150px;
+    margin-top: 11.5em;
 }
 
 .flex {
@@ -34,11 +30,11 @@ p {
 }
 
 .flex-child {
-    max-width: 500px;
+    max-width: 45%;
 }
 
 .space {
-    margin-bottom: 60px;
+    margin-bottom: 0.8em;
 }
 
 .arrow-right-containeur{

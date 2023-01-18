@@ -41,3 +41,26 @@ p{
     font-size: 1.2rem;/*25pt*/
     font-weight: 400;/*regular*/
 }
+
+/* ~~~~~ OPTIONS/BUTTONS ~~~~~ */
+
+.button {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: black;
+    border: 2px solid black;
+    padding: 0.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.6em;
+}
+
+.secondary {
+    border-width: 1px;
+    font-weight: 200;
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}

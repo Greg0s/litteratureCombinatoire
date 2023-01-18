@@ -6,39 +6,51 @@
 }
 
 h1 {
-    font-family: 'Major Mono Display', monospace;
-    font-size: 70px;
     line-height: 0.4em;
     text-align: center;
 }
 
 p {
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-    max-width: 1000px;
+    max-width: 80%;
     margin: auto;
     text-align: center;
 }
 
 /* ~~~~~ OPTIONS/BUTTONS ~~~~~ */
 
-.option {
+.button {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black;
     border: 2px solid black;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.6em;
 }
 
 .secondary {
     border-width: 1px;
+    font-weight: 200;
 }
 
-.option:hover {
+.button:hover {
     color: rgb(255, 255, 255);
     background-color: black;
+}
+
+.option{
+    border: 1px dotted black;
+    text-align: center;
+    padding: 0.75em;
+    max-width: 35%;
+}
+
+.option:hover{
+    border: 2px solid;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    padding: 0.713em;
 }
 
 /* ~~~~~ CONTAINERS ~~~~~ */
@@ -46,18 +58,20 @@ p {
 .game {
     position: relative;
     z-index: 2;
-    margin-top: 175px;
+    margin-top: 11.5em;
 }
 
-.flex {
+.options {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin: 2em;
 }
 
-.flex-child{
-    border: 1px dotted black;
-    padding: 10px;
-    max-width: 500px;
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
@@ -68,5 +82,5 @@ footer{
 /* ~~~~~ MARGINS/SPACES ~~~~~ */
 
 .space {
-    margin-bottom: 70px;
+    margin-bottom: 1em;
 }
