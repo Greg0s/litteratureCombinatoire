@@ -1,13 +1,8 @@
-section{
-    margin-top: 5em;
-    width: 70%;
-    margin: auto;
-}
-
 .grid{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap : 2em;
 }
 
 .projectText{

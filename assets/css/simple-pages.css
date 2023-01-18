@@ -1,5 +1,25 @@
 /*~~~~~For common styling between homepage, expo and final projects~~~~~*/
 
 section{
-    width: 80%;
+    margin-top: 8em !important;
+    width: 75%;
+    margin: auto;
+}
+
+.grid{
+    margin-top: 2em;
+}
+
+.project{
+    text-decoration: none;
+    color: black;
+}
+
+.projectTitle{
+    font-size: 1.2rem;
+}
+
+.project:hover{
+    background-color: black;
+    color: white;
 }
