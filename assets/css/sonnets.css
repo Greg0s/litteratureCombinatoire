@@ -19,17 +19,17 @@ p {
 /* ~~~~~ OPTIONS ~~~~~ */
 
 .option{
-    border: 1px dotted black;
+    border: none;
     text-align: center;
     padding: 0.75em;
     max-width: 35%;
 }
 
-.option:hover{
-    border: 2px solid;
+.option:hover, .option:focus {
+    border: 1px solid black;
     color: rgb(0, 0, 0);
     background-color: transparent;
-    padding: 0.713em;
+    padding: 0.709em;
 }
 
 /* ~~~~~ CONTAINERS ~~~~~ */
@@ -42,6 +42,7 @@ p {
 
 .options {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
@@ -72,7 +73,7 @@ footer{
 }
 
 .cercle1{
-    left: 85%;
+    margin-left: 85vw;
 }
 
 /* ~~~~~ MARGINS/SPACES ~~~~~ */

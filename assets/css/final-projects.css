@@ -18,3 +18,9 @@
 .projectAuthor{
     font-style: italic;
 }
+
+@media screen and (max-width: 930px) {
+    .project img{
+        width: 100%;
+    }
+}
