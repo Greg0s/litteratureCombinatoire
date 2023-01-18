@@ -39,6 +39,20 @@ p {
     text-underline-offset: 5vh;
 }
 
+
+.cercles{
+    justify-content: space-between;
+}
+
+.circle-shadow{
+    height: 10vh;
+    width: 10vh;
+}
+
+.cercle1{
+    margin-left: 85vw;
+}
+
 footer{
     position: relative;
     z-index: 3;
