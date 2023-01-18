@@ -6,21 +6,3 @@ section{
     margin: auto;
     margin-bottom: 4em;
 }
-
-.grid{
-    margin-top: 2em;
-}
-
-.project{
-    text-decoration: none;
-    color: black;
-}
-
-.projectTitle{
-    font-size: 1.2rem;
-}
-
-.project:hover{
-    background-color: black;
-    color: white;
-}
