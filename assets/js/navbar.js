@@ -1,4 +1,7 @@
-<header>
+document.write(`
+<header id="NavBar">
+      
+
     <div class="firstBar">
         <a href="#" class="logo">CoMBIMaC</a>
         <navbar>
@@ -42,5 +45,4 @@
         <a class="navlink" href="./sonnets_explanations.html">Sonnets</a>
     </div>
 </header>
-
-    
+`);
