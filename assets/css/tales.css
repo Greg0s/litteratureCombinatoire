@@ -42,6 +42,7 @@ p {
 
 .options {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin: 2em;
@@ -49,6 +50,7 @@ p {
 
 .nav-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
