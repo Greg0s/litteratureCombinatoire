@@ -151,7 +151,7 @@ navbar{
 .sidenav {
     width: 80%;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     right: -100%;
     background-color: white;
     transition: right 0.5s ease;
@@ -204,7 +204,7 @@ navbar{
     display: none;
     margin-left: 50px;
     min-width: 160px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .navlink-mobile:first-of-type{
@@ -234,7 +234,7 @@ navbar{
     right: 10%;
     top : 21px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 
