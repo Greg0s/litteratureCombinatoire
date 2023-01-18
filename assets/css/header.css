@@ -74,6 +74,7 @@ header a.logo {
     font-weight: bold;
     font-family: 'Major Mono Display', monospace;
     margin-left: 1.1em;
+    text-transform: none;
 }
 
 /* Just the tabs */
@@ -241,6 +242,9 @@ navbar{
 
 /* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */
 @media screen and (max-width: 930px) {
+    header{
+        position : fixed;
+    }
     header .logo{
         text-align: left;
     }
