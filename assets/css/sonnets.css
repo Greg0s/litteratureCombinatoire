@@ -1,0 +1,109 @@
+/* ~~~~~ TEXTS ~~~~~ */
+
+@font-face {
+    font-family: 'Major Mono Display', monospace;
+    src: url();
+}
+
+h1 {
+    text-align: center;
+    margin: 1em;
+}
+
+p {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* ~~~~~ OPTIONS ~~~~~ */
+
+.option{
+    border: none;
+    text-align: center;
+    padding: 0.75em;
+    max-width: 35%;
+}
+
+.option:hover, .option:focus {
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    padding: 0.709em;
+}
+
+/* ~~~~~ CONTAINERS ~~~~~ */
+
+.game {
+    position: relative;
+    z-index: 2;
+    margin-top: 11em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    position: relative;
+    z-index: 2;
+}
+
+/* ~~~~~ CIRCLES ~~~~~ */
+
+.cercles{
+    justify-content: space-between;
+}
+
+.circle-shadow{
+    height: 10vh;
+    width: 10vh;
+}
+
+.cercle1{
+    margin-left: 85vw;
+}
+
+/* ~~~~~ MARGINS/SPACES ~~~~~ */
+
+.space {
+    margin-bottom: 1em;
+}
+
+/* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */
+@media screen and (max-width: 930px) {
+    .game {
+        margin-top: 9em;
+    }
+    .options {
+        flex-direction: column;
+    }
+    .option {
+        max-width: 90%;
+    }
+
+    .cercles{
+        justify-content: space-between;
+    }
+    
+    .circle-shadow{
+        height: 10vh;
+        width: 10vh;
+    }
+    
+    .cercle1{
+        margin-left: 85vw;
+    }
+}
