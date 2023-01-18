@@ -16,28 +16,7 @@ p {
     text-align: center;
 }
 
-/* ~~~~~ OPTIONS/BUTTONS ~~~~~ */
-
-.button {
-    text-decoration: none;
-    font-size: 1.25rem;
-    color: black;
-    border: 2px solid black;
-    padding: 0.25em;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin: 0.6em;
-}
-
-.secondary {
-    border-width: 1px;
-    font-weight: 200;
-}
-
-.button:hover {
-    color: rgb(255, 255, 255);
-    background-color: black;
-}
+/* ~~~~~ OPTIONS ~~~~~ */
 
 .option{
     border: 1px dotted black;
@@ -77,6 +56,21 @@ p {
 footer{
     position: relative;
     z-index: 3;
+}
+
+/* ~~~~~ CIRCLES ~~~~~ */
+
+.cercles{
+    justify-content: space-between;
+}
+
+.circle-shadow{
+    height: 10vh;
+    width: 10vh;
+}
+
+.cercle1{
+    margin-left: 85vw;
 }
 
 /* ~~~~~ MARGINS/SPACES ~~~~~ */

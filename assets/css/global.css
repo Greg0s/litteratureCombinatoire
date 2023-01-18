@@ -42,12 +42,13 @@ p{
     font-weight: 400;/*regular*/
 }
 
-/* ~~~~~ OPTIONS/BUTTONS ~~~~~ */
+/* ~~~~~ BUTTONS ~~~~~ */
 
-.button {
-    text-decoration: none;
-    font-size: 1.25rem;
-    color: black;
+button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: transparent;
     border: 2px solid black;
     padding: 0.25em;
     padding-left: 1em;
@@ -57,10 +58,10 @@ p{
 
 .secondary {
     border-width: 1px;
-    font-weight: 200;
+    font-weight: 200; /* extra-light */
 }
 
-.button:hover {
+button:hover {
     color: rgb(255, 255, 255);
     background-color: black;
 }
