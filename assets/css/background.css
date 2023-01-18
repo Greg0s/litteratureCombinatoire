@@ -10,10 +10,10 @@ body{
     align-items: center;
     position: absolute;
     width: 100%;
+    top: 50%;
     z-index: auto;
+    filter:blur(100px);
 }
-
-
 
 .circle-shadow {
     margin: auto auto;
