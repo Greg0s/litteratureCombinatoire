@@ -19,6 +19,7 @@ p {
 .authors {
     font-weight: 200;
     max-width: none;
+    margin-bottom: 0.7em;
 }
 
 /* ~~~~~ OPTIONS ~~~~~ */
