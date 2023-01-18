@@ -21,7 +21,7 @@ p {
 .game {
     position: relative;
     z-index: 2;
-    margin-top: 11.5em;
+    margin-top: 13em;
 }
 
 .flex {
@@ -59,4 +59,11 @@ p {
 
 .space {
     margin-bottom: 1em;
+}
+
+/* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */
+@media screen and (max-width: 930px) {
+    .game {
+        margin-top: 9em;
+    }
 }

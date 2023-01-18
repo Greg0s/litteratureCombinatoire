@@ -6,7 +6,7 @@
 }
 
 h1 {
-    line-height: 0.4em;
+    line-height: 1rem;
     text-align: center;
 }
 
@@ -37,7 +37,7 @@ p {
 .game {
     position: relative;
     z-index: 2;
-    margin-top: 12em;
+    margin-top: 13em;
 }
 
 .options {
@@ -79,4 +79,17 @@ footer{
 
 .space {
     margin-bottom: 1em;
+}
+
+/* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */
+@media screen and (max-width: 930px) {
+    .game {
+        margin-top: 9em;
+    }
+    .options {
+        flex-direction: column;
+    }
+    .option {
+        max-width: 90%;
+    }
 }

@@ -4,7 +4,7 @@
 }
 
 h1 {
-    line-height: 0.4em;
+    line-height: 2rem;
     text-align: center;
 }
 
@@ -15,7 +15,7 @@ p {
 }
 
 .explanation {
-    margin-top: 12em;
+    margin-top: 13em;
     position: relative;
     z-index: 2;
 }
