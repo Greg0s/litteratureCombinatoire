@@ -1,10 +1,10 @@
 var cercle1=document.querySelector('.cercle1');
 var cercle2=document.querySelector('.cercle2');
 var cercle3=document.querySelector('.cercle3');
-var cercle2=document.querySelector('.cercle4');
-var cercle2=document.querySelector('.cercle5');
-var cercle2=document.querySelector('.cercle6');
-var cercle2=document.querySelector('.cercle7');
+var cercle4=document.querySelector('.cercle4');
+var cercle5=document.querySelector('.cercle5');
+var cercle6=document.querySelector('.cercle6');
+var cercle7=document.querySelector('.cercle7');
 
 
 var colors = ['#FFD6A5', '#FDFFB6', '#CAFFBF', '#9BF6FF', '#A0C4FF', '#BDB2FF', '#FFADAD'];
