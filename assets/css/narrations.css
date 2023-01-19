@@ -12,15 +12,34 @@ h1 {
 
 p {
     max-width: 80%;
-    margin: 0.8em;
+    margin: auto;
     text-align: center;
 }
 
-.authors {
-    font-weight: 200;
-    max-width: none;
+/* ~~~~~ OPTIONS ~~~~~ */
+
+.option{
+    border: none;
+    text-align: center;
+    padding: 0.75em;
+    max-width: 35%;
 }
 
+.option:hover, .option:focus {
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    padding: 0.709em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em;
+}   
 
 /* ~~~~~ CONTAINERS ~~~~~ */
 
