@@ -1,13 +1,57 @@
+html{
+    scroll-behavior: smooth;}
+
 .left {
     text-align: start;
-    padding-bottom: 1rem;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 .right{
     text-align: end;
-    padding-bottom: 1rem;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 .arrow-right-containeur{
-    rotate: 90;
+    margin-top: 5em;
+    transform : rotate(90deg);
 }
+
+.arrow-right{
+    transition: all 1s;
+    fill: black;
+}
+
+.arrow-rigth-SVG:hover .arrow-right{
+    transform: translateX(20px);
+}
+
+.welcome{
+    padding-top: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+}   
+
+
+#oulipo{
+    scroll-margin-top: 2em;
+}
+
+
+.cercles{
+    justify-content: space-between;
+}
+
+.circle-shadow{
+    height: 10vh;
+    width: 10vh;
+}
+
+.cercle1{
+    left: 85%;
+ }
+
+ .cercle2{
+    top: 90%
+ }
