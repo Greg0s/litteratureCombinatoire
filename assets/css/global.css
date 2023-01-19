@@ -64,6 +64,7 @@ button {
 button:hover {
     color: rgb(255, 255, 255);
     background-color: black;
+    cursor : pointer;
 }
 
 /* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */

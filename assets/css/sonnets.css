@@ -11,25 +11,14 @@ h1 {
 }
 
 p {
-    max-width: 80%;
-    margin: auto;
+    /* max-width: 80%; */
+    margin: 1em;
     text-align: center;
 }
 
-/* ~~~~~ OPTIONS ~~~~~ */
-
-.option{
-    border: none;
-    text-align: center;
-    padding: 0.75em;
-    max-width: 35%;
-}
-
-.option:hover, .option:focus {
-    border: 1px solid black;
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    padding: 0.709em;
+.authors {
+    font-weight: 200;
+    max-width: none;
 }
 
 /* ~~~~~ CONTAINERS ~~~~~ */
@@ -38,15 +27,6 @@ p {
     position: relative;
     z-index: 2;
     margin-top: 11em;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2em;
 }
 
 .nav-buttons {
