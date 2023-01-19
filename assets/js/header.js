@@ -3,7 +3,7 @@ document.write(`
       
 
     <div class="firstBar">
-        <a href="#" class="logo">CoMBIMaC</a>
+        <a href="../index.html" class="logo">CoMBIMaC</a>
         <navbar>
             <div class="dropbtn">Littérature & combinatoire
                 <img class="underDropbtn" src="../assets/svg/arrowUp.svg"/>
