@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/header.js"></script>
+
 </head>
 <body>
     <div class="game space">
@@ -19,7 +20,7 @@
        
         <p class="space"> <b>Vous êtes dans la première salle du célèbre dédale du minotaure parce que vous êtes nostalgique de l'époque où vous dévoriez des livres sur la mythologie grecque. </b> </p>
         <div>
-            <p class="flex-child ">À côté des fleurs fanées</p>
+            <p class="flex-child" id="firstLine"></p>
             <p class="underline"></p>
             <p class="flex-child ">Devant l'horloge depuis bien longtemps arrêtée</p>
             <p class="underline"></p>
@@ -43,3 +44,34 @@
 </html>
 
 <script type="text/javascript" src="../assets/js/scriptAnimCercles.js"></script> 
+<script>
+    //Access-Control-Allow-Origin: * comment faire sans *
+    //passer params ou resource ? comment récup l'un ou l'autre
+    var url = new URL('http://localhost/author')
+
+    var params = {lat:35.696233, long:139.570431} // or:
+    var params = [['idAuthor', '1']]
+
+    url.search = new URLSearchParams(params).toString();
+
+    fetch(url)
+    .then((response) => {
+        if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
+                            // check for any errors.
+            // In case of an error, throw.
+            throw new Error("Something went wrong!");
+        }
+        console.log(response);
+        response = response.json();
+        console.log(response);
+        return response['name']; // Parse the JSON data.
+    })
+    .then((data) => {
+            // This is where you handle what to do with the response.
+            document.querySelector("#firstLine").innerHTML = data;
+    })
+    .catch((error) => {
+            // This is where you handle errors.
+    });
+
+</script>
