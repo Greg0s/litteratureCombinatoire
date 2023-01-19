@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;}
+
 .left {
     text-align: start;
     margin-top: 5em;
@@ -16,8 +19,22 @@
     transform : rotate(90deg);
 }
 
+.arrow-right{
+    transition: all 1s;
+    fill: black;
+}
+
+.arrow-rigth-SVG:hover .arrow-right{
+    transform: translateX(20px);
+}
+
 .welcome{
     padding-top: 1em;
     text-align: center;
     margin-bottom: 2em;
 }   
+
+
+#oulipo{
+    scroll-margin-top: 2em;
+}
