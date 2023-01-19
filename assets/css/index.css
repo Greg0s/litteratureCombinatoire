@@ -1,13 +1,23 @@
 .left {
     text-align: start;
-    padding-bottom: 1rem;
+    margin-top: 5em;
+    margin-bottom: 5em;
+
 }
 
 .right{
     text-align: end;
-    padding-bottom: 1rem;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 .arrow-right-containeur{
-    rotate: 90;
+    margin-top: 5em;
+    transform : rotate(90deg);
 }
+
+.welcome{
+    padding-top: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+}   
