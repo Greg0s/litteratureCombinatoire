@@ -10,7 +10,7 @@ document.write(`
             </div>
 
             <a class="navlink" href="./expo.html">Exposition</a>
-            <a class="navlink" href="./final-projects.html">Créations</a>
+            <a class="navlink" href="./creations.html">Créations</a>
         </navbar>
         <div id="mySidenav" class="sidenav">
             <a id="dropdown" href="#">Littérature & combinatoire</a>
@@ -28,7 +28,7 @@ document.write(`
                 <img class="arrow-up" alt="Close dropdown mobile menu" src="../assets/svg/arrowUp.svg"/>
             </a>
             <a class="navlink-mobile" href="./expo.html">Exposition</a>
-            <a class="navlink-mobile" href="./final-projects.html">Créations</a>
+            <a class="navlink-mobile" href="./creations.html">Créations</a>
           </div> 
           <a href="#" id="openBtn">
             <img class="burger-icon icon" alt="Open mobile menu" src="../assets/svg/hamburger.svg"/>
