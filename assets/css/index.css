@@ -10,6 +10,11 @@ main {
     position: relative;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 /*============  LUCHY  ============*/
 .left {
     text-align: start;
@@ -45,7 +50,7 @@ main {
 
 
 #oulipo{
-    scroll-margin-top: 2em;
+    scroll-margin-top: 7em;
 }
 
 
