@@ -31,11 +31,11 @@ p {
     max-width: 35%;
 }
 
-.option:hover{
-    border: 2px solid;
+.option:hover {
+    border: 1px solid;
     color: rgb(0, 0, 0);
     background-color: transparent;
-    padding: 0.713em;
+    padding: 0.75em;
 }
 
 /* ~~~~~ CONTAINERS ~~~~~ */

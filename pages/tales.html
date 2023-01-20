@@ -14,14 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/header.js"></script>
+    <script type="text/javascript" src="../assets/js/tales.js"></script>
 </head>
 <body>
     <div class="game">
         <h1>CoNTes à vOTRe FAçoN</h1>
-        <p class="authors"><i>Le Minotaure</i> par Guilhem Duval</p>
-        <p class="space"> <b>Vous êtes dans la première salle du célèbre dédale du minotaure parce que vous êtes nostalgique de l'époque où vous dévoriez des livres sur la mythologie grecque. </b> </p>
+        <p class="authors"><i id="title"></i> par <span id="author"></span></p>
+        <p class="space" > <b id="text"></b> </p>
         <div class="options">
-            <button class="option" href="#">Vous voulez déjà en finir, vous empruntez un couloir d'où lequel émane un ronflement étrange.</button>
+            <button id="option1" class="option" href="#"></button>
             <button class="option" href="#">Vous êtes intelligent, vous cherchez des indices sur le chemin à emprunter dans la salle.</button>
         </div>
     </div>
