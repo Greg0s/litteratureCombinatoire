@@ -35,7 +35,7 @@ do{
     cercle7.style.background = colors[Math.floor(Math.random() * colors.length)];
     var color7=cercle7.style.background;
 
-}while(color==color2==color3==color4==color5==color6==color7)
+}while(color==color2 && color2==color3 && color3==color4 && color4==color5 && color5==color6 && color6==color7)
 
 /*cercle2.style.background = colors[1];
 cercle3.style.background = colors[2];
