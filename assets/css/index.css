@@ -64,30 +64,39 @@ main {
     width: 10vh;
 }
 
-/*.cercle1{
-    left: 10%;
+.cercle1{
+    left: 70%;
+    bottom : 30%;
 }
 
 .cercle2{
     left : 50%;
     bottom : 50%;
-}*/
+}
 
-/*.cercle3{
+.cercle3{
     left : 30%;
+    bottom : 10%;
 }
 
 .cercle4{
     left : 20%;
+    bottom : 90%;
 }
 
 .cercle5{
-    left : 10%;
+    left : 80%;
+    bottom : 40%;
 }
 
 .cercle6{
     left : 40%;
-}*/
+    bottom : 20%;
+}
 
+.cercle7{
+    left : 70%;
+    bottom : 3%;
+}
 
 

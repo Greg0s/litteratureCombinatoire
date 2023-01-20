@@ -9,7 +9,6 @@ var cercle7=document.querySelector('.cercle7');
 
 var colors = ['#FFD6A5', '#FDFFB6', '#CAFFBF', '#9BF6FF', '#A0C4FF', '#BDB2FF', '#FFADAD'];
 
-
 cercle1.style.background = colors[0];
 cercle2.style.background = colors[1];
 cercle3.style.background = colors[2];
@@ -35,7 +34,7 @@ cercle6.style["box-shadow"] = '0px 0px 100px 100px '+color6;
 cercle7.style["box-shadow"] = '0px 0px 100px 100px '+color7;
 
 
-cercle1.style.top = Math.floor(Math.random() * 100)+'%';
+/*cercle1.style.top = Math.floor(Math.random() * 100)+'%';
 cercle1.style.left = Math.floor(Math.random() * 100)+'%';
 
 cercle2.style.top = Math.floor(Math.random() * 100)+'%';
@@ -54,4 +53,6 @@ cercle6.style.top = Math.floor(Math.random() * 100)+'%';
 cercle6.style.left = Math.floor(Math.random() * 100)+'%';
 
 cercle7.style.top = Math.floor(Math.random() * 100)+'%';
-cercle7.style.left = Math.floor(Math.random() * 100)+'%';
+cercle7.style.left = Math.floor(Math.random() * 100)+'%';*/
+
+
