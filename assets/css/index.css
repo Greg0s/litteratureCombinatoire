@@ -61,15 +61,7 @@ main {
     z-index: -1;
 }
 
-
-/*.circle-shadow {
-    margin: auto auto;
-    height: 15vh;
-    width: 15vh;
-    border-radius: 100%;
-    backface-visibility: hidden;
-    overflow: hidden;
-}*/
+/*--------------décorations---------------*/
 
 .circle-shadow{
     height: 10vh;
