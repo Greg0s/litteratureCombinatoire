@@ -14,7 +14,6 @@ main {
 /*============  LUCHY  ============*/
 .left {
     text-align: start;
-    margin-top: 5em;
     margin-bottom: 5em;
 }
 
@@ -41,7 +40,7 @@ main {
 .welcome{
     padding-top: 1em;
     text-align: center;
-    margin-bottom: 2em;
+    /*margin-bottom: 2em;*/
     height : 100vh; 
 }   
 

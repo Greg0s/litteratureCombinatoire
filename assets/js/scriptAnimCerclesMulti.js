@@ -8,7 +8,6 @@ var cercle7=document.querySelector('.cercle7');
 
 
 var colors = ['#FFD6A5', '#FDFFB6', '#CAFFBF', '#9BF6FF', '#A0C4FF', '#BDB2FF', '#FFADAD'];
-/*var colors = ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000', '#000000']*/
 
 
 cercle1.style.background = colors[Math.floor(Math.random() * colors.length)];
@@ -19,50 +18,24 @@ cercle1.style["box-shadow"] = '0px 0px 100px 100px '+color;
 do{
     cercle2.style.background = colors[Math.floor(Math.random() * colors.length)];
     var color2=cercle2.style.background;
-}while (color==color2)
 
-
-do{
     cercle3.style.background = colors[Math.floor(Math.random() * colors.length)];
     var color3=cercle3.style.background;
-} while (color3==color2)
 
-do{
     cercle4.style.background = colors[Math.floor(Math.random() * colors.length)];
     var color4=cercle4.style.background;
-}while (color4==color3)
 
-do{
     cercle5.style.background = colors[Math.floor(Math.random() * colors.length)];
     var color5=cercle5.style.background;
-}while (color5==color4)
 
-do{
     cercle6.style.background = colors[Math.floor(Math.random() * colors.length)];
     var color6=cercle6.style.background;
-}while (color6==color5)
 
-do{
     cercle7.style.background = colors[Math.floor(Math.random() * colors.length)];
     var color7=cercle7.style.background;
-}while (color7==color6)
 
+}while (color==color2 && color2==color3 && color3==color4 && color5==color6 && color6==color7)
 
-
-/*cercle2.style.background = colors[1];
-cercle3.style.background = colors[2];
-cercle4.style.background = colors[3];
-cercle5.style.background = colors[4];
-cercle6.style.background = colors[5];
-cercle7.style.background = colors[6];
-
-
-var color2=cercle2.style.background;
-var color3=cercle3.style.background;
-var color4=cercle4.style.background;
-var color5=cercle5.style.background;
-var color6=cercle6.style.background;
-var color7=cercle7.style.background;*/
 
 
 cercle2.style["box-shadow"] = '0px 0px 100px 100px '+color2;
