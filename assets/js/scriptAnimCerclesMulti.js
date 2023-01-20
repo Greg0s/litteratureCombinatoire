@@ -8,6 +8,8 @@ var cercle7=document.querySelector('.cercle7');
 
 
 var colors = ['#FFD6A5', '#FDFFB6', '#CAFFBF', '#9BF6FF', '#A0C4FF', '#BDB2FF', '#FFADAD'];
+/*var colors = ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000', '#000000']*/
+
 
 cercle1.style.background = colors[Math.floor(Math.random() * colors.length)];
 var color=cercle1.style.background;
