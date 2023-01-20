@@ -4,7 +4,6 @@ $(document).ready(function(){
     generate.onclick = generateNarration;
 });
 
-
 function getRandomNarration(num){
     url = 'http://localhost/narration/' + num;
     fetch(url)
