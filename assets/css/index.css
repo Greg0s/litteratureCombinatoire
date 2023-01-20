@@ -59,44 +59,137 @@ main {
     z-index: -1;
 }
 
+
+/*.circle-shadow {
+    margin: auto auto;
+    height: 15vh;
+    width: 15vh;
+    border-radius: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+}*/
+
 .circle-shadow{
     height: 10vh;
     width: 10vh;
 }
 
+
 .cercle1{
-    left: 70%;
-    bottom : 30%;
+    animation-name: cercle1;
 }
 
 .cercle2{
-    left : 50%;
-    bottom : 50%;
+    animation-name: cercle2;
 }
 
 .cercle3{
-    left : 30%;
-    bottom : 10%;
+    animation-name: cercle3;
 }
 
 .cercle4{
-    left : 20%;
-    bottom : 90%;
+    animation-name: cercle4;
 }
 
 .cercle5{
-    left : 80%;
-    bottom : 40%;
+    animation-name: cercle5;
 }
 
 .cercle6{
-    left : 40%;
-    bottom : 20%;
+    animation-name: cercle6;
 }
 
 .cercle7{
-    left : 70%;
-    bottom : 3%;
+    animation-name: cercle7;
 }
 
+
+
+
+@keyframes cercle1 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(-5vw) translateY(5vw);
+    } 
+    100% {
+        transform: translateX(0) translateY(-5vw);
+    }
+}
+
+@keyframes cercle2 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
+
+}
+
+@keyframes cercle3 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(-5vw) translateY(5vw);
+    } 
+    100% {
+        transform: translateX(0) translateY(-5vw);
+    }
+}
+
+@keyframes cercle4 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
+
+}
+
+@keyframes cercle5 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(-5vw) translateY(5vw);
+    } 
+    100% {
+        transform: translateX(0) translateY(-5vw);
+    }
+}
+
+@keyframes cercle6 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
+
+}
+
+@keyframes cercle7 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(-5vw) translateY(5vw);
+    } 
+    100% {
+        transform: translateX(0) translateY(-5vw);
+    }
+}
 

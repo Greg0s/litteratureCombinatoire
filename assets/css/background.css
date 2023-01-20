@@ -36,6 +36,36 @@ body{
     animation-name: cercle2;
 }
 
+.cercle3{
+
+    
+    animation-name: cercle3;
+}
+
+.cercle4{
+
+    
+    animation-name: cercle4;
+}
+
+.cercle5{
+
+    
+    animation-name: cercle5;
+}
+
+.cercle6{
+
+    
+    animation-name: cercle6;
+}
+
+.cercle7{
+
+    
+    animation-name: cercle7;
+}
+
 .box {
     position: absolute; 
     animation-timing-function: linear;
@@ -74,4 +104,67 @@ body{
 }
 
 
+@keyframes cercle3 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
 
+}
+
+@keyframes cercle4 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
+
+}
+
+@keyframes cercle5 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
+
+}
+
+@keyframes cercle6 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
+
+}
+
+@keyframes cercle7 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }   
+    50% {
+        transform: translateX(5vw) translateY(-5vw);
+    } 
+    100% {
+        transform: translateY(5vw);
+    }
+
+}
