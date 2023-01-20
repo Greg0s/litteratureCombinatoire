@@ -65,8 +65,33 @@ main {
 }
 
 
+.cercle1{
+    animation-name: cercle1;
+}
 
+.cercle2{
+    animation-name: cercle2;
+}
 
+.cercle3{
+    animation-name: cercle3;
+}
+
+.cercle4{
+    animation-name: cercle4;
+}
+
+.cercle5{
+    animation-name: cercle5;
+}
+
+.cercle6{
+    animation-name: cercle6;
+}
+
+.cercle7{
+    animation-name: cercle7;
+}
 
 
 
