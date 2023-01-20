@@ -11,16 +11,16 @@ var colors = ['#FFD6A5', '#FDFFB6', '#CAFFBF', '#9BF6FF', '#A0C4FF', '#BDB2FF', 
 
 
 cercle1.style.background = colors[0];
-cercle2.style.background = color[1];
-cercle3.style.background = color[2];
-cercle4.style.background = color[3];
-cercle5.style.background = color[4];
-cercle6.style.background = color[5];
-cercle7.style.background = color[6];
+cercle2.style.background = colors[1];
+cercle3.style.background = colors[2];
+cercle4.style.background = colors[3];
+cercle5.style.background = colors[4];
+cercle6.style.background = colors[5];
+cercle7.style.background = colors[6];
 
 var color=cercle1.style.background;
 var color2=cercle2.style.background;
-var colo3=cercle3.style.background;
+var color3=cercle3.style.background;
 var color4=cercle4.style.background;
 var color5=cercle5.style.background;
 var color6=cercle6.style.background;
@@ -40,9 +40,6 @@ cercle1.style.left = Math.floor(Math.random() * 100)+'%';
 
 cercle2.style.top = Math.floor(Math.random() * 100)+'%';
 cercle2.style.left = Math.floor(Math.random() * 100)+'%';
-
-cercle3.style.top = Math.floor(Math.random() * 100)+'%';
-cercle3.style.left = Math.floor(Math.random() * 100)+'%';
 
 cercle3.style.top = Math.floor(Math.random() * 100)+'%';
 cercle3.style.left = Math.floor(Math.random() * 100)+'%';
