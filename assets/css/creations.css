@@ -9,6 +9,13 @@
     margin-top: 2em;
 }
 
+/*so that the wrapped element are aligned left*/
+.grid::after {
+    content: "";
+
+    width: 300px;
+  }
+
 .project{
     text-decoration: none;
     color: black;
@@ -29,13 +36,46 @@
     font-style: italic;
 }
 
-.project:hover{
+.filterDiv:hover{
+    background-color: black;
+}
+
+.filterDiv:hover > .project{
+    color : white;
+}
+
+.filterDiv {    
+    display: none; /* Hidden by default */
+  }
+
+.show{
+    display: block;
+}
+
+.btn.active {
     background-color: black;
     color: white;
+}
+
+#myBtnContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap : 1em;
+    margin-bottom: 3em;
+    margin-top:3em;
+}
+
+#myBtnContainer .btn{
+    margin: 0   ;
 }
 
 @media screen and (max-width: 930px) {
     .project img{
         width: 100%;
     }
+    .grid::after {
+        content: "";
+        width: 100%;
+    }    
 }

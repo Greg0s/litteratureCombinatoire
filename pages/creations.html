@@ -20,107 +20,82 @@
         <p>
             Liste des différentes productions des étudiants pour mettre en valeur leurs écrits.
         </p>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Tout</button>
+            <button class="btn" onclick="filterSelection('web')"> Web</button>
+            <button class="btn" onclick="filterSelection('obj')"> Objet</button>
+            <button class="btn" onclick="filterSelection('video')"> Vidéo</button>
+            <button class="btn" onclick="filterSelection('app')"> App</button>
+        </div>
         <div class="grid">
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="project">
-                <img src="../assets/img/ex.jpg"/>
-                <div class="projectText">
-                    <span class="projectTitle">
-                        Combinhaïkus
-                    </span>
-                    <span class="projectAuthor">
-                        Coralie Bonnand, Eliott Devaux
-                    </span>
-                </div>
-            </a>
+            <div class="filterDiv web">
+                <a href="#" class="project">
+                    <img src="../assets/img/ex.jpg"/>
+                    <div class="projectText">
+                        <span class="projectTitle">
+                            Combinhaïkus
+                        </span>
+                        <span class="projectAuthor">
+                            Coralie Bonnand, Eliott Devaux
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="filterDiv obj">
+                <a href="#" class="project obj">
+                    <img src="../assets/img/ex.jpg"/>
+                    <div class="projectText">
+                        <span class="projectTitle">
+                            Objet
+                        </span>
+                        <span class="projectAuthor">
+                            Coralie Bonnand, Eliott Devaux
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="filterDiv video">
+                <a href="#" class="project video">
+                    <img src="../assets/img/ex.jpg"/>
+                    <div class="projectText">
+                        <span class="projectTitle">
+                            Vidéo
+                        </span>
+                        <span class="projectAuthor">
+                            Coralie Bonnand, Eliott Devaux
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="filterDiv app">
+                <a href="#" class="project app">
+                    <img src="../assets/img/ex.jpg"/>
+                    <div class="projectText">
+                        <span class="projectTitle">
+                            App
+                        </span>
+                        <span class="projectAuthor">
+                            Coralie Bonnand, Eliott Devaux
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="filterDiv app">
+                <a href="#" class="project app">
+                    <img src="../assets/img/ex.jpg"/>
+                    <div class="projectText">
+                        <span class="projectTitle">
+                            App 2
+                        </span>
+                        <span class="projectAuthor">
+                            Coralie Bonnand, Eliott Devaux
+                        </span>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 </body>
 </html>
+
+<script type="text/javascript" src="../assets/js/creations.js"></script>
