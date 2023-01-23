@@ -1,8 +1,12 @@
 $(document).ready(function(){  
     generateNarration();
-    var generate = document.getElementById("generate");
-    generate.onclick = generateNarration;
+    //var keep = document.getElementById("keep");
+    var replace = document.getElementById("replace");
+    //keep.onclick = keepVerse;
+    replace.onclick = getRandomNarration(6);
 });
+
+/* ----- First generation ----- */
 
 function getRandomNarration(num){
     url = 'http://localhost/narration/' + num;
@@ -33,3 +37,13 @@ function generateNarration(){
         getRandomNarration(i);
     }
 }
+
+/* ----- Next generations ----- 
+
+/* Keep 
+function keepVerse(){
+    let verse = document.activeElement.innerHTML;
+    generateNarration();
+    document.getElementById(document.activeElement.id).innerHTML = verse;
+}*/
+
