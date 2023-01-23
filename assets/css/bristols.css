@@ -1,0 +1,17 @@
+main {
+    margin-top : 10em; 
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+
+.cards {
+    position : relative;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+}
