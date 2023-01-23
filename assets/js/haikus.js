@@ -1,9 +1,48 @@
-$(document).ready(function(){  
+$(document).ready(function(){ 
+    //var l1=document.getElementById("line1"); 
     generateHaiku();
     var generate = document.getElementById("generate");
-    generate.onclick = generateHaiku;
-});
 
+});
+function play() {
+   
+    document.querySelector("#line1").className = "flex-child";
+    document.querySelector("#line2").className = "flex-child";
+    document.querySelector("#line3").className = "flex-child";
+
+    window.requestAnimationFrame(function(time) {
+      window.requestAnimationFrame(function(time) {
+        document.querySelector("#line1").className = "flex-child animate";
+        document.querySelector("#line2").className = "flex-child animate";
+        document.querySelector("#line3").className = "flex-child animate";
+
+      });
+    });
+
+    document.querySelector("#line1").className = "flex-child";
+    document.querySelector("#line2").className = "flex-child";
+    document.querySelector("#line3").className = "flex-child";
+    
+  }
+
+  function anim() {
+    
+   play();
+    generateHaiku();
+    document.querySelector("#line1").className = "flex-child";
+    document.querySelector("#line2").className = "flex-child";
+    document.querySelector("#line3").className = "flex-child";
+
+    window.requestAnimationFrame(function(time) {
+      window.requestAnimationFrame(function(time) {
+        document.querySelector("#line1").className = "flex-child come";
+        document.querySelector("#line2").className = "flex-child come";
+        document.querySelector("#line3").className = "flex-child come";
+
+      });
+    });
+    
+  }
 
 function getRandomHaiku(num){
     url = 'http://localhost/haiku/' + num;
