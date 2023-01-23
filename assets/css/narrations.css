@@ -14,9 +14,17 @@ p {
     margin: auto;
     text-align: center;
 }
-button {
+
+button, .unactiveMode {
     margin: 0.1em;
 }
+
+.activeMode {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    cursor : pointer;
+}
+
 
 /* ~~~~~ OPTIONS ~~~~~ */
 

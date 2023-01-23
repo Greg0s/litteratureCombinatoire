@@ -1,12 +1,31 @@
+var mode;
+
 $(document).ready(function(){  
     generateNarration();
     var keep = document.getElementById("keep");
     var replace = document.getElementById("replace");
-    
-    keep.onclick = keepVerse;
+
+    /* select mode */
+    keep.addEventListener('click', function(){
+        mode = "keep";
+        keep.className = "activeMode";
+        replace.className = "unactiveMode";
+    })
     replace.addEventListener('click', function(){
-        getRandomNarration(6);
+        mode = "replace";
+        replace.className = "activeMode";
+        keep.className = "unactiveMode";
     });
+
+    /* action */
+    document.addEventListener('click', function() {
+        if (mode == "keep") {
+            keepVerse(parseInt(document.activeElement.id[4]));
+        }
+        else {
+            getRandomNarration(parseInt(document.activeElement.id[4]));
+        }
+    })
 });
 
 /* ----- First generation ----- */
@@ -28,11 +47,11 @@ function getRandomNarration(num){
             id = "#line" + num;
             console.log(id)
             document.querySelector(id).innerHTML = data['text'];
-    })
+    }) /*
     .catch((error) => {
             // This is where you handle errors.
             console.error("Error text narration");
-    });
+    }) */ ;
 }
 
 function generateNarration(){
@@ -44,11 +63,11 @@ function generateNarration(){
 /* ----- Next generations ----- */
 
 /* Keep */
-function keepVerse(){
-    for (let i = 1; i < 6; i++) {
+function keepVerse(num){
+    for (let i = 1; i < num; i++) {
         getRandomNarration(i);
     }
-    for (let i = 7; i < 9; i++) {
+    for (let i = num + 1; i < 9; i++) {
         getRandomNarration(i);
     }
 }
