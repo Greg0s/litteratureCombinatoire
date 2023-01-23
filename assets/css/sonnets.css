@@ -11,8 +11,7 @@ h1 {
 }
 
 p {
-    /* max-width: 80%; */
-    margin: 1em;
+    margin: 0.3em;
     text-align: center;
 }
 
@@ -31,6 +30,7 @@ p {
 
 .nav-buttons {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
