@@ -1,9 +1,12 @@
 $(document).ready(function(){  
     generateNarration();
-    //var keep = document.getElementById("keep");
+    var keep = document.getElementById("keep");
     var replace = document.getElementById("replace");
-    //keep.onclick = keepVerse;
-    replace.onclick = getRandomNarration(6);
+    
+    keep.onclick = keepVerse;
+    replace.addEventListener('click', function(){
+        getRandomNarration(6);
+    });
 });
 
 /* ----- First generation ----- */
@@ -38,12 +41,15 @@ function generateNarration(){
     }
 }
 
-/* ----- Next generations ----- 
+/* ----- Next generations ----- */
 
-/* Keep 
+/* Keep */
 function keepVerse(){
-    let verse = document.activeElement.innerHTML;
-    generateNarration();
-    document.getElementById(document.activeElement.id).innerHTML = verse;
-}*/
+    for (let i = 1; i < 6; i++) {
+        getRandomNarration(i);
+    }
+    for (let i = 7; i < 9; i++) {
+        getRandomNarration(i);
+    }
+}
 
