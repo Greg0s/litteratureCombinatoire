@@ -55,6 +55,33 @@ p {
    left: 85%;
 }
 
+
+.animate {
+    
+    animation: 1s linear reel ;
+
+} 
+
+.come{
+    animation: 1s linear come ;
+
+}
+@keyframes reel {
+    0%    { visibility: visible;
+        margin-right: 10vw; }
+    50%{ visibility: hidden;}
+    100%  { visibility: hidden;
+        margin-right: 50vw; }
+  }
+
+  @keyframes come {
+    0%    { visibility: hidden;
+        margin-left: 50vw; }
+    50%{ visibility: visible;}
+    100%  { visibility: visible;
+        margin-left: 10vw; }
+  }
+
 /* ~~~~~ MARGINS/SPACES ~~~~~ */
 
 .space {
