@@ -1,7 +1,32 @@
 $(document).ready(function(){  
     getRandomTale();
-});
 
+    // var choice0 = document.querySelector(".choice0");
+    // var choice1 = document.querySelector(".choice1");
+    // choice0.addEventListener('click', function(){
+    //     getNextText(0);
+    // });
+    // choice1.addEventListener('click', function(){
+    //     getNextText(1);
+    // });
+
+    document.querySelectorAll('.option').forEach(item => {
+        item.addEventListener('click', function(){
+            getNextText(item.id);
+        })
+    });
+
+    // var choice = document.querySelector(".choice0, .choice1");
+    // choice.addEventListener('click', function(){
+        
+     });
+// });
+
+
+
+// 
+// var choice1 = document.querySelector(".choice1");
+// choice1.onclick = getNextText(choice1.id);
 
 function getRandomTale(){
     url = 'http://localhost/tale';
@@ -14,20 +39,22 @@ function getRandomTale(){
     })
     .then((data) => {
             // console.log(data['id_tale']);
+            //id tale
+            id_tale = data['id_tale'];
             //title
             document.querySelector('#title').innerHTML = data['title'];
             //author
             getTaleAuthor(data['id_tale']);
             //1st text
-            getTaleText(1, 1);
+            getTaleText(data['id_first_text']);
     })
     .catch((error) => {
             console.error("Error tale");
     });
 }
 
-function getTaleAuthor($id){
-    url = 'http://localhost/tale/author/' + $id;
+function getTaleAuthor(id){
+    url = 'http://localhost/tale/author/' + id;
     fetch(url)
     .then((response) => {
         if(!response.ok){ 
@@ -37,7 +64,7 @@ function getTaleAuthor($id){
         return response.json(); 
     })
     .then((data) => {
-            console.log(data['name']);
+            //console.log(data['name']);
             document.querySelector('#author').innerHTML = data['first_name'] + ' ' + data['name'];
     })
     .catch((error) => {
@@ -45,8 +72,8 @@ function getTaleAuthor($id){
     });
 }
 
-function getTaleText($id){
-    url ='http://localhost/tale/text/' + $id;
+function getTaleText(id){
+    url ='http://localhost/tale/text/' + id;
     // let params = [['id', $id], ['num', $num]]
     // url.search = new URLSearchParams(params).toString();
     fetch(url)
@@ -54,15 +81,73 @@ function getTaleText($id){
         if(!response.ok){
             throw new Error("Something went wrong!");
         }
-        console.log(response);
+        //console.log(response);
         return response.json();
     })
     .then((data) => {
-            console.log(data['text']);
+            //console.log(data['text']);
             document.querySelector('#text').innerHTML = data['text'];
+            getTextChoices(id, 0);
+            getTextChoices(id, 1);
     })
     .catch((error) => {
             console.error("Error tale texts");
     });
     
+}
+
+function getTextChoices(id_text, choice_num){
+    url ='http://localhost/text/choices/' + id_text;
+    fetch(url)
+    .then((response) => {
+        if(!response.ok){
+            throw new Error("Something went wrong!");
+        }
+        //console.log(response);
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data['error']);
+        if(data['error'] != undefined){
+            document.querySelectorAll('.option').forEach(item => {
+                item.style.display = 'none';
+            });
+            // document.querySelector('.choice0').style.display('none');
+        }else{
+            let htmlIdChoice = '.choice' + choice_num;
+            //console.log(htmlIdChoice);
+            document.querySelector(htmlIdChoice).innerHTML = data[choice_num]['choice_text'];
+            //add id to next text in id attribute
+            document.querySelector(htmlIdChoice).setAttribute('id','text_' + data[choice_num]['id_text_next']);
+        }
+    })
+    .catch((error) => {
+            console.error("Error tale texts");
+    });
+    
+}
+
+// function getNextText(choice){
+//     if(choice == 0){
+//         id = document.querySelector('.choice0').id.slice(-1);
+//     }else{
+//         id = document.querySelector('.choice1').id.slice(-1);
+//     }
+//     //console.log(id);
+//     getTaleText(id);
+//     getTextChoices(id, 0);
+//     getTextChoices(id, 1);
+// }
+
+function getNextText(idName){
+    let htmlId = '#' + idName;
+    //console.log(htmlId);
+    //to manage 2 digits id
+    id = document.querySelector(htmlId).id.slice(-2);
+    id = id.split('_').join("");
+    //console.log(id);
+
+    getTaleText(id);
+    getTextChoices(id, 0);
+    getTextChoices(id, 1);
 }
