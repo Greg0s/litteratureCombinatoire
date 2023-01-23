@@ -1,30 +1,23 @@
 $(document).ready(function(){  
     getRandomTale();
 
-    // var choice0 = document.querySelector(".choice0");
-    // var choice1 = document.querySelector(".choice1");
-    // choice0.addEventListener('click', function(){
-    //     getNextText(0);
-    // });
-    // choice1.addEventListener('click', function(){
-    //     getNextText(1);
-    // });
-
     document.querySelectorAll('.option').forEach(item => {
         item.addEventListener('click', function(){
             getNextText(item.id);
         })
     });
 
-    // var choice = document.querySelector(".choice0, .choice1");
-    // choice.addEventListener('click', function(){
-        
-     });
-// });
+    var restartBtn = document.querySelector("#restart");
+    restartBtn.addEventListener('click', function(){
+        restartTale();
+    })
 
+    var change = document.querySelector("#change");
+    change.addEventListener('click', function(){
+        getRandomTale();
+    })
+});
 
-
-// 
 // var choice1 = document.querySelector(".choice1");
 // choice1.onclick = getNextText(choice1.id);
 
@@ -41,6 +34,29 @@ function getRandomTale(){
             // console.log(data['id_tale']);
             //id tale
             id_tale = data['id_tale'];
+            document.querySelector('#currentTaleId').innerHTML = data['id_tale'];
+            //title
+            document.querySelector('#title').innerHTML = data['title'];
+            //author
+            getTaleAuthor(data['id_tale']);
+            //1st text
+            getTaleText(data['id_first_text']);
+    })
+    .catch((error) => {
+            console.error("Error tale");
+    });
+}
+
+function getTale(id){
+    url = 'http://localhost/talebyid/' + id;
+    fetch(url)
+    .then((response) => {
+        if(!response.ok){ 
+            throw new Error("Something went wrong!");
+        }
+        return response.json(); 
+    })
+    .then((data) => {
             //title
             document.querySelector('#title').innerHTML = data['title'];
             //author
@@ -107,7 +123,7 @@ function getTextChoices(id_text, choice_num){
         return response.json();
     })
     .then((data) => {
-        console.log(data['error']);
+        //console.log(data['error']);
         if(data['error'] != undefined){
             document.querySelectorAll('.option').forEach(item => {
                 item.style.display = 'none';
@@ -150,4 +166,8 @@ function getNextText(idName){
     getTaleText(id);
     getTextChoices(id, 0);
     getTextChoices(id, 1);
+}
+
+function restartTale(){
+    getTale(document.querySelector('#currentTaleId').innerHTML);
 }
