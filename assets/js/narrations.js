@@ -45,8 +45,9 @@ function getRandomNarration(num){
     .then((data) => {
             // This is where you handle what to do with the response.
             id = "#line" + num;
-            console.log(id)
             document.querySelector(id).innerHTML = data['text'];
+            //authors
+            getNarrationAuthor(data['id_narration']);
     }) /*
     .catch((error) => {
             // This is where you handle errors.
@@ -58,6 +59,25 @@ function generateNarration(){
     for(i = 1 ; i < 9 ; i++){
         getRandomNarration(i);
     }
+}
+
+function getNarrationAuthor(id){
+    url = 'http://localhost/narration/author/' + id;
+    fetch(url)
+    .then((response) => {
+        if(!response.ok){ 
+            throw new Error("Something went wrong!");
+        }
+        //console.log(response);
+        return response.json(); 
+    })
+    .then((data) => {
+            //console.log(data['name']);
+            document.querySelector('#author').innerHTML = data['first_name'] + ' ' + data['name'];
+    })
+    .catch((error) => {
+            console.error("Error tale author");
+    });
 }
 
 /* ----- Next generations ----- */
