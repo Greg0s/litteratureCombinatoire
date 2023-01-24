@@ -16,7 +16,7 @@ document.write(`
             <a id="dropdown" href="#">Littérature & combinatoire</a>
             <div id="mySecondBarMobile" class="secondBarMobile">
                 <a class="navlink-mobile" href="./haikus_explanations.html">Haïkus</a>
-                <a class="navlink-mobile" href="./narrations_explanations copy.html">Narrations</a>
+                <a class="navlink-mobile" href="./narrations_explanations.html">Narrations</a>
                 <a class="navlink-mobile" href="./bristols_explanations.html">Bristols</a>
                 <a class="navlink-mobile" href="./tales_explanations.html">Contes à votre façon</a>
                 <a class="navlink-mobile" href="./sonnets_explanations.html">Sonnets</a>
