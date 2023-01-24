@@ -7,17 +7,17 @@ $(document).ready(function() {
 
 
 function getRandomBristolSerie(){
-  url = 'http://localhost/bristols/';
+  url = 'http://localhost/bristols';
   fetch(url)
   .then((response) => {
       if(!response.ok){ 
           throw new Error("Something went wrong!");
-      }
-      console.log(response); 
+      } 
+      console.log(response.json());
       return response.json(); 
   })
   .then((data) => {
-    console.log(data['id_bristol']);
+    console.log(data);
     //getTaleAuthor(data['id_tale']);
     //getTextsFromSerie();
   })
