@@ -10,36 +10,14 @@ h1 {
     margin: 0.5em;
 }
 
+h3 {
+    text-align: center;
+}
+
 p {
-    max-width: 80%;
-    margin: auto;
+    margin: 0.4em;
     text-align: center;
 }
-
-/* ~~~~~ OPTIONS ~~~~~ */
-
-.option{
-    border: none;
-    text-align: center;
-    padding: 0.75em;
-    max-width: 35%;
-}
-
-.option:hover, .option:focus {
-    border: 1px solid black;
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    padding: 0.709em;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2em;
-}   
 
 /* ~~~~~ CONTAINERS ~~~~~ */
 
@@ -49,13 +27,8 @@ p {
     margin-top: 11em;
 }
 
-.verses {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2em;
+.main {
+    margin : 3em;
 }
 
 .nav-buttons {

@@ -16,6 +16,10 @@ p {
     text-align: center;
 }
 
+h3{
+    text-align: center;
+}
+
 /* ~~~~~ CONTAINERS ~~~~~ */
 
 .game {
@@ -54,6 +58,46 @@ p {
 .cercle1{
    left: 85%;
 }
+
+
+.animate {
+    
+    animation: 1s linear reel ;
+
+} 
+
+.come{
+    animation: 1s linear come ;
+
+}
+
+.nav-buttons{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#groupnum{
+    display: none;
+}
+
+@keyframes reel {
+    0%    { visibility: visible;
+        margin-right: 10vw; }
+    50%{ visibility: hidden;}
+    100%  { visibility: hidden;
+        margin-right: 50vw; }
+  }
+
+  @keyframes come {
+    0%    { visibility: hidden;
+        margin-left: 50vw; }
+    50%{ visibility: visible;}
+    100%  { visibility: visible;
+        margin-left: 10vw; }
+  }
 
 /* ~~~~~ MARGINS/SPACES ~~~~~ */
 

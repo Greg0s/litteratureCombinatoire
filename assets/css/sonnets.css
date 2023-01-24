@@ -10,9 +10,9 @@ h1 {
     margin: 1em;
 }
 
+
 p {
-    /* max-width: 80%; */
-    margin: 1em;
+    margin: 0.3em;
     text-align: center;
 }
 
@@ -20,6 +20,42 @@ p {
     font-weight: 200;
     max-width: none;
 }
+
+/* ~~~~~ BUTTONS ~~~~~ */
+
+button, .unactiveMode {
+    margin: 0.1em;
+}
+
+.activeMode {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    cursor : pointer;
+}
+
+/* ~~~~~ OPTIONS ~~~~~ */
+
+.option{
+    border: none;
+    text-align: center;
+    padding: 0.2em;
+}
+
+.option:hover, .option:focus {
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    padding: 0.165em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em;
+}   
 
 /* ~~~~~ CONTAINERS ~~~~~ */
 
@@ -31,9 +67,18 @@ p {
 
 .nav-buttons {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2.2em;
+}
+
+.subnav-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    margin: 2em;
 }
 
 footer{
@@ -59,7 +104,29 @@ footer{
 /* ~~~~~ MARGINS/SPACES ~~~~~ */
 
 .space {
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
+}
+
+/* ~~~~~ PAGE ORIGINAL SONNETS ~~~~~ */
+
+h3{
+    text-align: center;
+}
+
+.sonnet{
+    margin-bottom : 4em;
+}
+
+.fixedBtn button{
+    position: fixed;
+    bottom : 0;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.fixedBtn button:hover{
+    background-color: black;
 }
 
 /* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */

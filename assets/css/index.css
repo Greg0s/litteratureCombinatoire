@@ -10,6 +10,11 @@ main {
     position: relative;
 }
 
+a{
+    color:black;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.05rem;
+}
 
 /*============  LUCHY  ============*/
 .left {
