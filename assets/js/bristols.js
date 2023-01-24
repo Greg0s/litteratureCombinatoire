@@ -1,42 +1,25 @@
 $(document).ready(function() {
 
-    var button = document.getElementById("button");
-    var bristols = ['vers1', 'vers2', 'vers3'];
-    bristols.push("c'est la fin");
+    var bristols = ['vers1', 'vers 2', 'vers 3'];
 
-    var  nbIncrementations = -1;
-    button.addEventListener("click", IncrementCompter(nbIncrementations));
+// Select increment button
+const incrementCount = document.getElementById("button");
+const text = document.getElementById("text");
 
-    if (nbIncrementations == -1)
-    {
-        document.getElementById("shuffle").innerHTML = "Mélangez les bristols";
-    }
+// Variable to track count
+var count = -1;
 
-    else if (nbIncrementations > -1 && nbIncrementations <= bristols.lenght)
-    {
-        while (nbIncrementations < bristols.lenght)
-        {
-            document.getElementById("shuffle").innerHTML = bristols[nbIncrementations];
-        }
-    }
+// Display initial message
+text.innerHTML = "Mélangez les bristols" ;
 
-    else 
-    {
-        document.getElementById("shuffle").innerHTML = "Fin du jeu";
-    }
 
-    console.log(nbIncrementations);
+// Function to increment count
+const handleIncrement = () => {
+  count++;
+  text.innerHTML = bristols[count];
+};
+
+// Add click event to buttons
+incrementCount.addEventListener("click", handleIncrement);
 
 })
-
-function IncrementCompter (value)
-{
-    value = value + 1;
-}
-    
-
-    /*else {
-        console.log("fin");
-        document.getElementById("shuffle").innerHTML = "c'est la fin";
-    }*/
-
