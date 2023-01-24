@@ -39,7 +39,7 @@ document.write(`
     </div>
     <div class="secondBar">
         <a class="navlink" href="./haikus_explanations.html">Haïkus</a>
-        <a class="navlink" href="./narrations_explanations copy.html">Narrations</a>
+        <a class="navlink" href="./narrations_explanations.html">Narrations</a>
         <a class="navlink" href="./bristols_explanations.html">Bristols</a>
         <a class="navlink" href="./tales_explanations.html">Contes à votre façon</a>
         <a class="navlink" href="./sonnets_explanations.html">Sonnets</a>
