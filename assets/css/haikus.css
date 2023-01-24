@@ -66,6 +66,19 @@ p {
     animation: 1s linear come ;
 
 }
+
+.nav-buttons{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#groupnum{
+    display: none;
+}
+
 @keyframes reel {
     0%    { visibility: visible;
         margin-right: 10vw; }
