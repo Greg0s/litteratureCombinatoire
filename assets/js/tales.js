@@ -10,11 +10,17 @@ $(document).ready(function(){
     var restartBtn = document.querySelector("#restart");
     restartBtn.addEventListener('click', function(){
         restartTale();
+        document.querySelectorAll('.option').forEach(item => {
+            item.style.display = 'block';
+        });
     })
 
     var change = document.querySelector("#change");
     change.addEventListener('click', function(){
         getRandomTale();
+        document.querySelectorAll('.option').forEach(item => {
+            item.style.display = 'block';
+        });
     })
 });
 
