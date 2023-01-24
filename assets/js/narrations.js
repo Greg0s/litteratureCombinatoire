@@ -2,36 +2,14 @@ var mode;
 
 $(document).ready(function(){  
     generateNarration();
-    var keep = document.getElementById("keep");
-    var replace = document.getElementById("replace");
-
-    /* select mode */
-    keep.addEventListener('click', function(){
-        mode = "keep";
-        keep.className = "activeMode";
-        replace.className = "unactiveMode";
-    })
-    replace.addEventListener('click', function(){
-        mode = "replace";
-        replace.className = "activeMode";
-        keep.className = "unactiveMode";
-    });
-
-    /* action */
-    document.addEventListener('click', function() {
-        if (mode == "keep") {
-            keepVerse(parseInt(document.activeElement.id[4]));
-        }
-        else {
-            getRandomNarration(parseInt(document.activeElement.id[4]));
-        }
-    })
+    var generate = document.getElementById("generate");
+    generate.onclick = generateNarration;
 });
 
 /* ----- First generation ----- */
 
 function getRandomNarration(num){
-    url = 'http://localhost/narration/' + num;
+    url = 'http://localhost/narrationrand/' + num;
     fetch(url)
     .then((response) => {
         if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
@@ -47,12 +25,12 @@ function getRandomNarration(num){
             id = "#line" + num;
             document.querySelector(id).innerHTML = data['text'];
             //authors
-            getNarrationAuthor(data['id_narration']);
-    }) /*
+            getNarrationAuthor(/*data['id_narration']*/1);
+    }) 
     .catch((error) => {
             // This is where you handle errors.
             console.error("Error text narration");
-    }) */ ;
+    });
 }
 
 function generateNarration(){
@@ -62,7 +40,7 @@ function generateNarration(){
 }
 
 function getNarrationAuthor(id){
-    url = 'http://localhost/narration/author/' + id;
+    url = 'http://localhost/narration/authors/' + id;
     fetch(url)
     .then((response) => {
         if(!response.ok){ 
@@ -73,10 +51,11 @@ function getNarrationAuthor(id){
     })
     .then((data) => {
             //console.log(data['name']);
-            document.querySelector('#author').innerHTML = data['first_name'] + ' ' + data['name'];
+            document.querySelector('#author1').innerHTML = data[0]['first_name'] + ' ' + data[0]['name'];
+            document.querySelector('#author2').innerHTML = data[1]['first_name'] + ' ' + data[1]['name'];
     })
     .catch((error) => {
-            console.error("Error tale author");
+            console.error("Error narration author");
     });
 }
 

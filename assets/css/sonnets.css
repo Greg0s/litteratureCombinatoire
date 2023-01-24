@@ -21,6 +21,42 @@ p {
     max-width: none;
 }
 
+/* ~~~~~ BUTTONS ~~~~~ */
+
+button, .unactiveMode {
+    margin: 0.1em;
+}
+
+.activeMode {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    cursor : pointer;
+}
+
+/* ~~~~~ OPTIONS ~~~~~ */
+
+.option{
+    border: none;
+    text-align: center;
+    padding: 0.2em;
+}
+
+.option:hover, .option:focus {
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    padding: 0.165em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em;
+}   
+
 /* ~~~~~ CONTAINERS ~~~~~ */
 
 .game {
@@ -35,6 +71,14 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2.2em;
+}
+
+.subnav-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    margin: 2em;
 }
 
 footer{
@@ -60,7 +104,7 @@ footer{
 /* ~~~~~ MARGINS/SPACES ~~~~~ */
 
 .space {
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
 }
 
 /* ~~~~~ PAGE ORIGINAL SONNETS ~~~~~ */
