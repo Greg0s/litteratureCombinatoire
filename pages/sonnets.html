@@ -19,24 +19,27 @@
 <body>
     <div class="game">
         <h1 class="space">SoNnETs</h1>
-        <div>
-            <p id="line1"></p>
-            <p id="line2"></p>
-            <p id="line3"></p>
-            <p id="line4"></p>
-            <br>
-            <p id="line5"></p>
-            <p id="line6"></p>
-            <p id="line7"></p>
-            <p id="line8"></p>
-            <br>
-            <p id="line9"></p> 
-            <p id="line10"></p> 
-            <p id="line11"></p> 
-            <br>
-            <p id="line12"></p> 
-            <p id="line13"></p> 
-            <p id="line14"></p> 
+        <div class="options">
+            <button class="option" id="line1"></button>
+            <button class="option" id="line2"></button>
+            <button class="option" id="line3"></button>
+            <button class="option" id="line4"></button>
+        </div>
+        <div class="options">
+            <button class="option" id="line5"></button>
+            <button class="option" id="line6"></button>
+            <button class="option" id="line7"></button>
+            <button class="option" id="line8"></button>
+        </div>
+        <div class="options">
+            <button class="option" id="line9"></button> 
+            <button class="option" id="line10"></button> 
+            <button class="option" id="line11"></button> 
+        </div>
+        <div class="options">
+            <button class="option" id="line12"></button> 
+            <button class="option" id="line13"></button> 
+            <button class="option" id="line14"></button> 
         </div>
     </div>
 
@@ -46,10 +49,13 @@
     </div>
     
     <footer class="nav-buttons">
-        <button id="generate">Générer →</button>
+        <!--<button id="generate">Générer →</button> -->
+        <div class="subnav-buttons">
+            <button class="unactiveMode" id="replace">Remplacer</button>
+            <button class="unactiveMode" id="keep">Conserver</button>
+        </div>
         <a href="original_sonnets.html"><button class="secondary">Voir les textes originaux</button></a>
     </footer>
-    
 </body>
 </html>
 

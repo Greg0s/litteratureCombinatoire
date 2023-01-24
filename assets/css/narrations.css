@@ -10,45 +10,14 @@ h1 {
     margin: 0.5em;
 }
 
+h3 {
+    text-align: center;
+}
+
 p {
-    margin: auto;
+    margin: 0.4em;
     text-align: center;
 }
-
-button, .unactiveMode {
-    margin: 0.1em;
-}
-
-.activeMode {
-    color: rgb(255, 255, 255);
-    background-color: black;
-    cursor : pointer;
-}
-
-
-/* ~~~~~ OPTIONS ~~~~~ */
-
-.option{
-    border: none;
-    text-align: center;
-    padding: 0.3em;
-}
-
-.option:hover, .option:focus {
-    border: 1px solid black;
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    padding: 0.26em;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2em;
-}   
 
 /* ~~~~~ CONTAINERS ~~~~~ */
 
@@ -56,6 +25,10 @@ button, .unactiveMode {
     position: relative;
     z-index: 2;
     margin-top: 11em;
+}
+
+.main {
+    margin : 3em;
 }
 
 .nav-buttons {
