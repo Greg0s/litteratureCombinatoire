@@ -10,11 +10,13 @@ $(document).ready(function(){
   var change = document.getElementById("change");
   
   generate.addEventListener('click', function(){
-    getRandomHaikuNewGroup(true);
+    animation(1);
+    // getRandomHaikuNewGroup(true);
   })
 
   change.addEventListener('click', function(){
-    getRandomHaikuNewGroup(false);
+    animation(2);
+    // getRandomHaikuNewGroup(false);
   })
 
 });
@@ -85,41 +87,39 @@ function generateHaikuSameGroup(group_num){
   }
 }
 
+function animation(mode){
+  play();
+  if(mode == 1){
+    setTimeout(getRandomHaikuNewGroup(true), 500);
+  }else{
+    setTimeout(getRandomHaikuNewGroup(false), 500);
+  }
+  setTimeout(anim, 500);
+}
+
 function play() {
+   
+    document.querySelector("#line1").className = "flex-child";
+    document.querySelector("#line2").className = "flex-child";
+    document.querySelector("#line3").className = "flex-child";
 
-  document.querySelector("#line1").className = "flex-child";
-  document.querySelector("#line2").className = "flex-child";
-  document.querySelector("#line3").className = "flex-child";
-
-  window.requestAnimationFrame(function(time) {
     window.requestAnimationFrame(function(time) {
-      document.querySelector("#line1").className = "flex-child animate";
-      document.querySelector("#line2").className = "flex-child animate";
-      document.querySelector("#line3").className = "flex-child animate";
+      window.requestAnimationFrame(function(time) {
+        document.querySelector("#line1").className = "flex-child animate";
+        document.querySelector("#line2").className = "flex-child animate";
+        document.querySelector("#line3").className = "flex-child animate";
 
-    });
-  });
-
-  document.querySelector("#line1").className = "flex-child";
-  document.querySelector("#line2").className = "flex-child";
-  document.querySelector("#line3").className = "flex-child";
-
+      });
+    });   
 }
 
 function anim() {
 
-  play();
-  generateHaiku();
-  document.querySelector("#line1").className = "flex-child";
-  document.querySelector("#line2").className = "flex-child";
-  document.querySelector("#line3").className = "flex-child";
-
   window.requestAnimationFrame(function(time) {
     window.requestAnimationFrame(function(time) {
-      document.querySelector("#line1").className = "flex-child come";
-      document.querySelector("#line2").className = "flex-child come";
-      document.querySelector("#line3").className = "flex-child come";
-
+      document.querySelector("#line1").className = "flex-child animate come";
+      document.querySelector("#line2").className = "flex-child animate come";
+      document.querySelector("#line3").className = "flex-child animate come";
+    });
   });
-})
-};
+}
