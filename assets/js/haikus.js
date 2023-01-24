@@ -36,10 +36,10 @@ function getRandomHaikuNewGroup(sameGroup){
   .then((data) => {
           console.log(data['group_num']);
           if(sameGroup){
-            generateHaikuSameGroup(document.querySelector("#groupnum").innerHTML);
+              generateHaikuSameGroup(document.querySelector("#groupnum").innerHTML);
           }else{
-            document.querySelector("#groupnum").innerHTML = data['group_num'];
-            generateHaikuSameGroup(data['group_num']);
+              document.querySelector("#groupnum").innerHTML = data['group_num'];
+              generateHaikuSameGroup(data['group_num']);
           }
           //document.querySelector('#groupnum').innerHTML = data['group_num'];
   })
@@ -67,6 +67,7 @@ function getRandomHaiku(num, group_num){
           id = "#line" + num;
           console.log(id)
           document.querySelector(id).innerHTML = data['text'];
+          getHaikuAuthorGroup(group_num);
   })
   .catch((error) => {
           // This is where you handle errors.
@@ -74,12 +75,55 @@ function getRandomHaiku(num, group_num){
   });
 }
 
-// function changeGroup(){
-//     let group_num = getRandomGroup();
-//     for(i = 1 ; i < 4 ; i++){
-//         getRandomHaiku(i, group_num);
-//     }
-// }
+function getHaikuAuthorGroup(group_num){
+  //console.log(group_num);
+  url = 'http://localhost/haiku/authorGroup/' + group_num;
+  //console.log(url);
+  fetch(url)
+  .then((response) => {
+      if(!response.ok){
+          throw new Error("Something went wrong!");
+      }
+      //console.log(response.json());
+      return response.json(); // Parse the JSON data.
+  })
+  .then((data) => {
+    getHaikuAuthor(data[0]['id_author'], 1);
+    if(data[1]['id_author'] != undefined){
+      getHaikuAuthor(data[1]['id_author'], 2);
+    }
+      
+  })
+  .catch((error) => {
+          // This is where you handle errors.
+          console.error("Error author group");
+  });
+}
+
+function getHaikuAuthor(id_author, num){
+  //console.log(group_num);
+  fetch('http://localhost/haiku/author/' + id_author)
+  .then((response) => {
+      if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
+                          // check for any errors.
+          // In case of an error, throw.
+          throw new Error("Something went wrong!");
+      }
+      //console.log(response.json());
+      return response.json(); // Parse the JSON data.
+  })
+  .then((data) => {
+          if(num == 1){
+            document.querySelector("#author"+num).innerHTML = data['first_name'] + " " + data['name'];
+          }else{
+            document.querySelector("#author"+num).innerHTML = " et " + data['first_name'] + " " + data['name'];
+          }
+  })
+  .catch((error) => {
+          // This is where you handle errors.
+          console.error("Error author haiku");
+  });
+}
 
 function generateHaikuSameGroup(group_num){
   for(i = 1 ; i < 4 ; i++){
