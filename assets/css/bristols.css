@@ -22,7 +22,7 @@ body
     overflow-y: scroll;
 }
 
-button
+.button
 {
     font-family: 'Nunito', sans-serif;
     font-size: 1.2rem;
@@ -31,12 +31,12 @@ button
     border: 2px solid black;
     padding: 2em;
     display : inline-block;
-    width : 10em ;
-    height : 6.5em ;
+    width : 6em ;
+    height : 2.5em ;
 }
 
-
-button:hover {
+    
+.button:hover {
     color: rgb(255, 255, 255);
     background-color: black;
     cursor : pointer;
