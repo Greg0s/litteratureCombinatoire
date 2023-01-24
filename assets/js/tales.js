@@ -37,7 +37,7 @@ function getRandomTale(){
         return response.json(); 
     })
     .then((data) => {
-            // console.log(data['id_tale']);
+            //console.log(data['id_tale']);
             //id tale
             id_tale = data['id_tale'];
             document.querySelector('#currentTaleId').innerHTML = data['id_tale'];
