@@ -1,32 +1,34 @@
 $(document).ready(function() {
 
-    var bristols = ['vers1', 'vers2', 'vers3'];
+  let bristols = ['vers1', 'vers 2', 'vers 3'];
+  
 
-    var nbIncrementations = -1 ;
+  // Select increment button
+  const incrementCount = document.getElementById("button");
+  const text = document.getElementById("text");
 
-    if (nbIncrementations == -1)
+  // Variable to track count
+  var count = -1;
+  var max = bristols.length;
+  
+
+
+  // Display initial message
+  text.innerHTML = "Mélangez les bristols" ;
+
+
+  // Function to increment count
+  const handleIncrement = () => {
+    if (count >= max)
     {
-        document.getElementById("newBristol").innerHTML = "Mélangez les bristols";
-    }
+      document.getElementById('button').disabled = true;
+      text.innerHTML = "Fin du jeu";
 
-    else if (nbIncrementations > -1 && nbIncrementations <= bristols.lenght)
-    {
-        while (nbIncrementations < bristols.lenght)
-        {
-            document.getElementById("newBristol").innerHTML = bristols[nbIncrementations];
-        }
-    }
-
-    else 
-    {
-        document.getElementById("newBristol").innerHTML = "Fin du jeu";
-    }
-
-    console.log(nbIncrementations);
-
+      if (count < max)
+      {
+        text.innerHTML = bristols[count];
+        count ++ ;
+      }
+    } 
+  };
 })
-
-
-function increase(){
-    nbIncrementations ++ ; 
-}    
