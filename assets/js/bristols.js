@@ -4,20 +4,35 @@ $(document).ready(function() {
     var bristols = ['vers1', 'vers2', 'vers3'];
     bristols.push("c'est la fin");
 
-    var  nbIncrementations = 0; 
- 
+    var  nbIncrementations = -1;
+    button.addEventListener("click", IncrementCompter(nbIncrementations));
 
-    button.addEventListener("click", moveInTheArray(bristols, nbIncrementations));
-
-    })
-
-
-
-    function moveInTheArray(array, i)
+    if (nbIncrementations == -1)
     {
-        i++; 
-        document.getElementById("shuffle").innerHTML = array[i];
+        document.getElementById("shuffle").innerHTML = "Mélangez les bristols";
     }
+
+    else if (nbIncrementations > -1 && nbIncrementations <= bristols.lenght)
+    {
+        while (nbIncrementations < bristols.lenght)
+        {
+            document.getElementById("shuffle").innerHTML = bristols[nbIncrementations];
+        }
+    }
+
+    else 
+    {
+        document.getElementById("shuffle").innerHTML = "Fin du jeu";
+    }
+
+    console.log(nbIncrementations);
+
+})
+
+function IncrementCompter (value)
+{
+    value = value + 1;
+}
     
 
     /*else {
