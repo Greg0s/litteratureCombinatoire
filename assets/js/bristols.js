@@ -1,7 +1,33 @@
 $(document).ready(function() {
 
-  let bristols = ['vers1', 'vers 2', 'vers 3'];
-  
+  getRandomBristolSerie();
+
+})
+
+
+
+function getRandomBristolSerie(){
+  url = 'http://localhost/bristols/';
+  fetch(url)
+  .then((response) => {
+      if(!response.ok){ 
+          throw new Error("Something went wrong!");
+      }
+      console.log(response); 
+      return response.json(); 
+  })
+  .then((data) => {
+    console.log(data['id_bristol']);
+    //getTaleAuthor(data['id_tale']);
+    //getTextsFromSerie();
+  })
+  .catch((error) => {
+          // This is where you handle errors.
+          console.error("Error text bristols");
+  });
+}
+  /*let bristols = ['vers1', 'vers 2', 'vers 3'];*/
+  /*let bristols = getBristols();
 
   // Select increment button
   const incrementCount = document.getElementById("button");
@@ -31,4 +57,10 @@ $(document).ready(function() {
       }
     } 
   };
-})
+
+  function generateBristolSerie();
+
+})*/
+
+
+//get random id "généraux" de bristols 
