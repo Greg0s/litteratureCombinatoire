@@ -4,6 +4,13 @@ $(document).ready(function(){
     var generate = document.getElementById("generate");
 
 });
+
+function animation(){
+  play();
+  setTimeout(generateHaiku, 500);
+  setTimeout(anim, 500);
+}
+
 function play() {
    
     document.querySelector("#line1").className = "flex-child";
@@ -17,27 +24,16 @@ function play() {
         document.querySelector("#line3").className = "flex-child animate";
 
       });
-    });
-
-    document.querySelector("#line1").className = "flex-child";
-    document.querySelector("#line2").className = "flex-child";
-    document.querySelector("#line3").className = "flex-child";
-    
+    });   
   }
 
   function anim() {
-    
-   play();
-    generateHaiku();
-    document.querySelector("#line1").className = "flex-child";
-    document.querySelector("#line2").className = "flex-child";
-    document.querySelector("#line3").className = "flex-child";
-
+ 
     window.requestAnimationFrame(function(time) {
       window.requestAnimationFrame(function(time) {
-        document.querySelector("#line1").className = "flex-child come";
-        document.querySelector("#line2").className = "flex-child come";
-        document.querySelector("#line3").className = "flex-child come";
+        document.querySelector("#line1").className = "flex-child animate come";
+        document.querySelector("#line2").className = "flex-child animate come";
+        document.querySelector("#line3").className = "flex-child animate come";
 
       });
     });
@@ -45,6 +41,7 @@ function play() {
   }
 
 function getRandomHaiku(num){
+
     url = 'http://localhost/haiku/' + num;
     fetch(url)
     .then((response) => {
@@ -69,6 +66,7 @@ function getRandomHaiku(num){
 }
 
 function generateHaiku(){
+  
     for(i = 1 ; i < 4 ; i++){
         getRandomHaiku(i);
     }
