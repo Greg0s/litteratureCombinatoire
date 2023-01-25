@@ -61,34 +61,26 @@ button:hover {
     display: none;
 }
 
-.container {
+
+.bgtext {
     overflow: hidden;
-    display: flex;
-    width : 100% ;
-    /* Fonctionne avec toutes les tailles */
     position: absolute;
     top: 40%;
     left : 0%;
-    transform: translateY(-10%);
-
-
-    /* pour rotate on enlève le translate et on rajoute le rotate */
-    /* transform:  rotate(90deg); */
-  }
-
-.bgtext {
-    width : 100%;
+    transform: translateX(-100%);
+    width : fit-content;
     white-space: nowrap;
-    font-size: 20px;
-    animation: 15s linear infinite scrollTxt ;
+    font-size: 1.2em;
+    animation: 5s linear infinite scrollTxt ;
   }
 
 
   @keyframes scrollTxt {
     0%{
-      transform: translate(-60%, 0);
+      transform: translate(-100vw, 0);
     }
     100% {
-      transform: translate(60%, 0);
+
+      transform: translate(100vw, 0);
     }
   }
