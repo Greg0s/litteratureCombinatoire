@@ -71,8 +71,20 @@ button:hover {
     width : fit-content;
     white-space: nowrap;
     font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+.animate {
     animation: 5s linear infinite scrollTxt ;
-  }
+}
 
 
   @keyframes scrollTxt {

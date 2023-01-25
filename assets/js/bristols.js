@@ -8,6 +8,7 @@ $(document).ready(function() {
     // console.log(document.querySelector("#cpt").innerHTML);
     if(document.querySelector("#cpt").innerHTML < 36){
       changeVers();
+      play();
       console.log(cptClick);
       cptClick ++;
     }
@@ -111,7 +112,7 @@ function changeVers(){
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActive = "#text" + cpt;
 
-  //console.log(idAddActive);
+  console.log(idAddActive);
   document.querySelector(idAddActive).classList.add("active");
   if(cpt < 34){
     idAddActiveBg = "#bgtext" + cpt;
@@ -127,9 +128,29 @@ function changeVers(){
 }
 
 
+function play() {
+   
+  cpt = document.querySelector("#cpt").innerHTML;
+  idAddActiveBg = "#bgtext" + (cpt-2);
+  console.log(idAddActiveBg);
+
+  window.requestAnimationFrame(function(time) {
+    window.requestAnimationFrame(function(time) {
+        document.querySelector(idAddActiveBg).className = "bgtext animate";
+    });
+  });   
+}
+
+function place () 
+{
+  cpt = document.querySelector("#cpt").innerHTML;
+  idAddActiveBg = "#bgtext" + (cpt-2);
+  console.log(idAddActiveBg);
+
+  
 
 
-
+}
 
 /*function changeVers(data)
 {
