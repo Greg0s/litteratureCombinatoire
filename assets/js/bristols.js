@@ -8,6 +8,8 @@ $(document).ready(function() {
     // console.log(document.querySelector("#cpt").innerHTML);
     if(document.querySelector("#cpt").innerHTML < 36){
       changeVers();
+      place();
+      play();
       console.log(cptClick);
       cptClick ++;
     }
@@ -73,8 +75,10 @@ function getTextsFromSerie(id){
     cpt = 1;
     data.forEach(element => {
       idToWrite = "#text" + cpt;
+      idToAnimate = "#bgtext" + cpt;
       //console.log(idToWrite);
       document.querySelector(idToWrite).innerHTML = element['text'];
+      document.querySelector(idToAnimate).innerHTML = element['text'];
       //console.log(element['text']);
       cpt++;
     });
@@ -109,7 +113,7 @@ function changeVers(){
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActive = "#text" + cpt;
 
-  //console.log(idAddActive);
+  console.log(idAddActive);
   document.querySelector(idAddActive).classList.add("active");
   if(cpt < 34){
     idAddActiveBg = "#bgtext" + cpt;
@@ -122,6 +126,29 @@ function changeVers(){
   //set new compteur  
   cpt += 2;
   document.querySelector("#cpt").innerHTML = cpt;
+}
+
+
+function play() {
+   
+  cpt = document.querySelector("#cpt").innerHTML;
+  idAddActiveBg = "#bgtext" + (cpt-2);
+  console.log(idAddActiveBg);
+
+  window.requestAnimationFrame(function(time) {
+    window.requestAnimationFrame(function(time) {
+        document.querySelector(idAddActiveBg).className = "bgtext animate";
+    });
+  });   
+}
+
+function place () 
+{
+  cpt = document.querySelector("#cpt").innerHTML;
+  idAddActiveBg = "#bgtext" + (cpt-2);
+  
+  text = document.querySelector(idAddActiveBg) ;
+  text.style.top = getRandomArbitrary(0,80) + '%';
 }
 
 /*function changeVers(data)
@@ -157,3 +184,9 @@ const handleIncrement = () => {
     }
   }
 }*/
+
+
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
