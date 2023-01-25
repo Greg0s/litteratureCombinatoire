@@ -107,8 +107,6 @@ function getNarrationAuthor(id_author, num){
     .then((data) => {
         if(num == 1){
             document.querySelector("#author"+num).innerHTML = data['first_name'] + " " + data['name'];
-            num += 1;
-            document.querySelector("#author"+num).innerHTML = '';
         }
         else{
             document.querySelector("#author"+num).innerHTML = " et " + data['first_name'] + " " + data['name'];
