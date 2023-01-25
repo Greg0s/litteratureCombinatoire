@@ -31,8 +31,9 @@ button
     border: 2px solid black;
     padding: 2em;
     display : inline-block;
-    width : 8em ;
-    height : 5em ;
+    max-width: 14em;
+    /* width : 8em ;
+    height : 8em ; */
 }
 
 
@@ -48,3 +49,46 @@ button:hover {
     display : block;
 }
 
+.text{
+    display: none;
+}
+
+.active{
+    display: inline;
+}
+
+#cpt{
+    display: none;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    width : 100% ;
+    /* Fonctionne avec toutes les tailles */
+    position: absolute;
+    top: 40%;
+    left : 0%;
+    transform: translateY(-10%);
+
+
+    /* pour rotate on enlève le translate et on rajoute le rotate */
+    /* transform:  rotate(90deg); */
+  }
+
+.bgtext {
+    width : 100%;
+    white-space: nowrap;
+    font-size: 20px;
+    animation: 15s linear infinite scrollTxt ;
+  }
+
+
+  @keyframes scrollTxt {
+    0%{
+      transform: translate(-60%, 0);
+    }
+    100% {
+      transform: translate(60%, 0);
+    }
+  }
