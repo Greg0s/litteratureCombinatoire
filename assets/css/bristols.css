@@ -76,18 +76,13 @@ button:hover {
     width : fit-content;
     white-space: nowrap;
     font-size: 1.2em;
+    z-index: -1;
 }
 
 
-#bgtext1 {
-}
-
-#bgtext2 {
-}
-
-#bgtext3 {
-}
-
+#bgtext1 {}
+#bgtext2 {}
+#bgtext3 {}
 #bgtext4 {}
 #bgtext5 {}
 #bgtext6 {}
