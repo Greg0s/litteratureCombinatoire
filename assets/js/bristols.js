@@ -8,6 +8,7 @@ $(document).ready(function() {
     // console.log(document.querySelector("#cpt").innerHTML);
     if(document.querySelector("#cpt").innerHTML < 36){
       changeVers();
+      place();
       play();
       console.log(cptClick);
       cptClick ++;
@@ -145,11 +146,9 @@ function place ()
 {
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActiveBg = "#bgtext" + (cpt-2);
-  console.log(idAddActiveBg);
-
   
-
-
+  text = document.querySelector(idAddActiveBg) ;
+  text.style.top = getRandomArbitrary(0,80) + '%';
 }
 
 /*function changeVers(data)
@@ -185,3 +184,9 @@ const handleIncrement = () => {
     }
   }
 }*/
+
+
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}

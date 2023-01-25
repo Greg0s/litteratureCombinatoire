@@ -65,7 +65,7 @@ button:hover {
 .bgtext {
     overflow: hidden;
     position: absolute;
-    top: 40%;
+    /*top: 40%;*/
     left : 0%;
     transform: translateX(-100%);
     width : fit-content;
@@ -74,8 +74,45 @@ button:hover {
 }
 
 
+#bgtext1 {
+}
 
+#bgtext2 {
+}
 
+#bgtext3 {
+}
+
+#bgtext4 {}
+#bgtext5 {}
+#bgtext6 {}
+#bgtext7 {}
+#bgtext8 {}
+#bgtext9 {}
+#bgtext10 {}
+#bgtext11 {}
+#bgtext12 {}
+#bgtext13 {}
+#bgtext14 {}
+#bgtext15 {}
+#bgtext16 {}
+#bgtext17 {}
+#bgtext18 {}
+#bgtext19 {}
+#bgtext20 {}
+#bgtext21 {}
+#bgtext22 {}
+#bgtext23 {}
+#bgtext24 {}
+#bgtext25 {}
+#bgtext26 {}
+#bgtext27 {}
+#bgtext28 {}
+#bgtext29 {}
+#bgtext30 {}
+#bgtext31 {}
+#bgtext32 {}
+#bgtext33 {}
 
 
 
