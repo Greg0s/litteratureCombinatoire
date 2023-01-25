@@ -34,7 +34,7 @@ function getRandomHaikuNewGroup(sameGroup){
       return response.json(); // Parse the JSON data.
   })
   .then((data) => {
-          console.log(data['group_num']);
+          //console.log(data['group_num']);
           if(sameGroup){
               generateHaikuSameGroup(document.querySelector("#groupnum").innerHTML);
           }else{
@@ -65,9 +65,9 @@ function getRandomHaiku(num, group_num){
   .then((data) => {
           // This is where you handle what to do with the response.
           id = "#line" + num;
-          console.log(id)
+          //console.log(id)
           document.querySelector(id).innerHTML = data['text'];
-          getHaikuAuthorGroup(group_num);
+
   })
   .catch((error) => {
           // This is where you handle errors.
@@ -88,9 +88,12 @@ function getHaikuAuthorGroup(group_num){
       return response.json(); // Parse the JSON data.
   })
   .then((data) => {
-    getHaikuAuthor(data[0]['id_author'], 1);
-    if(data[1]['id_author'] != undefined){
-      getHaikuAuthor(data[1]['id_author'], 2);
+    //console.log(data[0]['id_author']);
+    document.querySelector("#author1").innerHTML = '';
+    document.querySelector("#author2").innerHTML = '';
+    getHaikuAuthor(data[0]['id_author'], true);
+    if(data.length > 1){
+      getHaikuAuthor(data[1]['id_author'], false);
     }
       
   })
@@ -100,7 +103,7 @@ function getHaikuAuthorGroup(group_num){
   });
 }
 
-function getHaikuAuthor(id_author, num){
+function getHaikuAuthor(id_author, onlyOne){
   //console.log(group_num);
   fetch('http://localhost/haiku/author/' + id_author)
   .then((response) => {
@@ -113,12 +116,12 @@ function getHaikuAuthor(id_author, num){
       return response.json(); // Parse the JSON data.
   })
   .then((data) => {
-          if(num == 1){
-            document.querySelector("#author"+num).innerHTML = data['first_name'] + " " + data['name'];
-            num += 1;
-            document.querySelector("#author"+num).innerHTML = '';
+          
+          if(onlyOne){
+            document.querySelector("#author1").innerHTML = data['first_name'] + " " + data['name'];
+            
           }else{
-            document.querySelector("#author"+num).innerHTML = " et " + data['first_name'] + " " + data['name'];
+            document.querySelector("#author2").innerHTML = " et " + data['first_name'] + " " + data['name'];
           }
   })
   .catch((error) => {
@@ -128,6 +131,7 @@ function getHaikuAuthor(id_author, num){
 }
 
 function generateHaikuSameGroup(group_num){
+  getHaikuAuthorGroup(group_num);
   for(i = 1 ; i < 4 ; i++){
       getRandomHaiku(i, group_num);
   }

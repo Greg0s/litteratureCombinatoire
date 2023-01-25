@@ -32,14 +32,6 @@ function getRandomNarrationNewGroup(sameGroup){
         return response.json(); // Parse the JSON data.
     })
     .then((data) => {
-        /*
-        // This is where you handle what to do with the response.
-        id = "#line" + num;
-        document.querySelector(id).innerHTML = data['text'];
-        //authors
-        getNarrationAuthor(data['id_narration']);
-        */
-
         if(sameGroup){
             generateNarrationSameGroup(document.querySelector("#groupnum").innerHTML);
         }else{
@@ -71,7 +63,7 @@ function getRandomNarration(num, group_num){
             id = "#line" + num;
             console.log(id)
             document.querySelector(id).innerHTML = data['text'];
-            getNarrationAuthorGroup(group_num);
+            
     })
     .catch((error) => {
             // This is where you handle errors.
@@ -93,8 +85,8 @@ function getNarrationAuthorGroup(group_num){
             document.querySelector('#author1').innerHTML = data[0]['first_name'] + ' ' + data[0]['name'];
             document.querySelector('#author2').innerHTML = data[1]['first_name'] + ' ' + data[1]['name'];
             */
-            getHaikuAuthor(data[0]['id_author'], 1);
-            getHaikuAuthor(data[1]['id_author'], 2);
+            getNarrationAuthor(data[0]['id_author'], 1);
+            getNarrationAuthor(data[1]['id_author'], 2);
     })
     .catch((error) => {
             console.error("Error narration author group");
@@ -129,6 +121,7 @@ function getNarrationAuthor(id_author, num){
 }
 
 function generateNarrationSameGroup(group_num){
+    getNarrationAuthorGroup(group_num);
     for(i = 1 ; i < 9 ; i++){
         getRandomNarration(i, group_num);
     }
