@@ -73,8 +73,10 @@ function getTextsFromSerie(id){
     cpt = 1;
     data.forEach(element => {
       idToWrite = "#text" + cpt;
+      idToAnimate = "#bgtext" + cpt;
       //console.log(idToWrite);
       document.querySelector(idToWrite).innerHTML = element['text'];
+      document.querySelector(idToAnimate).innerHTML = element['text'];
       //console.log(element['text']);
       cpt++;
     });
@@ -123,6 +125,11 @@ function changeVers(){
   cpt += 2;
   document.querySelector("#cpt").innerHTML = cpt;
 }
+
+
+
+
+
 
 /*function changeVers(data)
 {
