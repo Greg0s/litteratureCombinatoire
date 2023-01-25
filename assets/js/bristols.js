@@ -25,6 +25,10 @@ $(document).ready(function() {
     document.querySelector("#text35").classList.remove('active');
     document.querySelector("#text0").classList.add('active');
     document.querySelector("#cpt").innerHTML = 1;
+    
+    foreachdocument.querySelectorAll('.bgtext').forEach(element => {
+      element.classList.remove('active');
+    });
   })
 
   // const restart = document.getElementById("text34");
@@ -104,8 +108,13 @@ function changeVers(){
   //get compteur
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActive = "#text" + cpt;
+
   //console.log(idAddActive);
   document.querySelector(idAddActive).classList.add("active");
+  if(cpt < 34){
+    idAddActiveBg = "#bgtext" + cpt;
+    document.querySelector(idAddActiveBg).classList.add("active");
+  }
   cpt -= 1;
   idRmActive = "#text" + cpt;
   //console.log(idRmActive);
