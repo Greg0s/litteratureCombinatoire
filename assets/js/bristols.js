@@ -8,7 +8,8 @@ $(document).ready(function() {
     // console.log(document.querySelector("#cpt").innerHTML);
     if(document.querySelector("#cpt").innerHTML < 36){
       changeVers();
-      place();
+      placeHorizontal();
+      placeVertical();
       play();
       console.log(cptClick);
       cptClick ++;
@@ -28,7 +29,7 @@ $(document).ready(function() {
     document.querySelector("#text0").classList.add('active');
     document.querySelector("#cpt").innerHTML = 1;
     
-    foreachdocument.querySelectorAll('.bgtext').forEach(element => {
+    foreachdocument.querySelectorAll('.bgTextHorizontal').forEach(element => {
       element.classList.remove('active');
     });
   })
@@ -75,10 +76,13 @@ function getTextsFromSerie(id){
     cpt = 1;
     data.forEach(element => {
       idToWrite = "#text" + cpt;
-      idToAnimate = "#bgtext" + cpt;
+      idToAnimateHorizontal = "#bgtext" + cpt;
+      idToAnimateVertical = "#bgtext" + (cpt+33);
+      
       //console.log(idToWrite);
       document.querySelector(idToWrite).innerHTML = element['text'];
-      document.querySelector(idToAnimate).innerHTML = element['text'];
+      document.querySelector(idToAnimateHorizontal).innerHTML = element['text'];
+      document.querySelector(idToAnimateVertical).innerHTML = element['text'];
       //console.log(element['text']);
       cpt++;
     });
@@ -133,22 +137,34 @@ function play() {
    
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActiveBg = "#bgtext" + (cpt-2);
+  idAddActiveBgVertical = "#bgtext" + (cpt-2+33);
   console.log(idAddActiveBg);
 
   window.requestAnimationFrame(function(time) {
     window.requestAnimationFrame(function(time) {
-        document.querySelector(idAddActiveBg).className = "bgtext animate";
+        document.querySelector(idAddActiveBg).className = "bgTextHorizontal animateHorizontal";
+        document.querySelector(idAddActiveBgVertical).className = "bgTextHorizontal animateVertical";
     });
   });   
 }
 
-function place () 
+function placeHorizontal () 
 {
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActiveBg = "#bgtext" + (cpt-2);
   
   text = document.querySelector(idAddActiveBg) ;
-  text.style.top = getRandomArbitrary(0,80) + '%';
+  text.style.top = getRandomArbitrary(15,100) + '%';
+}
+
+function placeVertical ()
+{
+  cpt = document.querySelector("#cpt").innerHTML;
+  idAddActiveBg = "#bgtext" + (cpt-2+33);
+  
+  text = document.querySelector(idAddActiveBg) ;
+  text.style.left = 50 + "%";
+  /*text.style.top = getRandomArbitrary(0,100) + '%';*/
 }
 
 /*function changeVers(data)
@@ -188,5 +204,5 @@ const handleIncrement = () => {
 
 
 function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.floor(Math.random() * (max - min) + min);
 }

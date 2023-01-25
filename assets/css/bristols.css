@@ -67,16 +67,20 @@ button:hover {
 }
 
 
-.bgtext {
+.bgTextHorizontal {
     overflow: hidden;
     position: absolute;
-    /*top: 40%;*/
-    left : 0%;
+    top : 0% ;
+    left : 0% ;
     transform: translateX(-100%);
     width : fit-content;
     white-space: nowrap;
     font-size: 1.2em;
     z-index: -1;
+}
+
+.bgtext {
+    transform: rotate(-90deg);
 }
 
 
@@ -115,21 +119,68 @@ button:hover {
 #bgtext33 {}
 
 
+#bgtext34 {}
+#bgtext35 {}
+#bgtext36 {}
+#bgtext37 {}
+#bgtext38 {}
+#bgtext39 {}
+#bgtext40 {}
+#bgtext41 {}
+#bgtext42 {}
+#bgtext43 {}
+#bgtext44 {}
+#bgtext45 {}
+#bgtext46 {}
+#bgtext47 {}
+#bgtext48 {}
+#bgtext49 {}
+#bgtext50 {}
+#bgtext51 {}
+#bgtext52 {}
+#bgtext53 {}
+#bgtext54 {}
+#bgtext55 {}
+#bgtext56 {}
+#bgtext57 {}
+#bgtext58 {}
+#bgtext59 {}
+#bgtext60 {}
+#bgtext61 {}
+#bgtext62 {}
+#bgtext63 {}
+#bgtext64 {}
+#bgtext65 {}
+#bgtext66 {}
 
 
 
 
-.animate {
-    animation: 5s linear infinite scrollTxt ;
+
+
+.animateHorizontal {
+    animation: 10s linear infinite scrollHorizontalTxt ;
 }
 
+.animateVertical {
+    animation : 10s linear infinite scrollVerticalTxt ; 
+}
 
-  @keyframes scrollTxt {
+  @keyframes scrollHorizontalTxt {
     0%{
       transform: translate(-100vw, 0);
     }
     100% {
 
       transform: translate(100vw, 0);
+    }
+  }
+
+  @keyframes scrollVerticalTxt {
+    0%{
+        transform : translateY(-100vh, 0);
+    }
+    100%{
+        transform : translateY(100vh,0);
     }
   }
