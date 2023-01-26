@@ -81,7 +81,7 @@ button, .unactiveMode {
     margin: 2em;
 }
 
-footer{
+.btnContaineur{
     position: relative;
     z-index: 2;
 }

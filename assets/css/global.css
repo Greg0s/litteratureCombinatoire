@@ -25,6 +25,9 @@ body{
     overflow-y: scroll;
 }
 
+body{ display:flex; flex-direction:column; }
+main{ flex:1; }
+
 *,
 *::before,
 *::after
@@ -83,6 +86,20 @@ button:hover {
     background-color: black;
     cursor : pointer;
 }
+
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em; 
+}
+
+.line{
+    width: 90%;
+    border-top: 1px solid #000;
+    margin-bottom: 1em;
+}
+
 
 /* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */
 

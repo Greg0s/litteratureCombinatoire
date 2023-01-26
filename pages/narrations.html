@@ -17,8 +17,9 @@
     <script type="text/javascript" src="../assets/js/narrations.js"></script>
 </head>
 <body>
+    <main>
     <div class="game">
-        <h1>NarRATioN</h1>
+        <h1>NarRATioNS</h1>
         <h3 class="authors">Ecrit par <span id="author1"></span> <span id="author2"></span></h3>
         <div class="main">
             <p id="line1"></p>
@@ -38,11 +39,19 @@
         <div class="circle-shadow box bouge slow cercle2"></div>
     </div>
     
-    <footer class="nav-buttons">
+    <div class="btnContaineur nav-buttons">
         <button id="generate">Générer →</button>
         <button class="secondary" id="change">Changer de série</button>
-    </footer>
+    </div>
+</main>
+    <footer class="footer bas">
+        <p class="line"></p>
+            <p>© <script>
+                    document.write(new Date().getFullYear());
     
+                </script> - Lucie AUGIER, Juliette JEANNIN, Grégoire TINNES, Emma VEAUVY
+            </p>
+       </footer> 
 </body>
 </html>
 

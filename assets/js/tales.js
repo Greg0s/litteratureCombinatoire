@@ -39,14 +39,18 @@ function getRandomTale(){
     .then((data) => {
             //console.log(data['id_tale']);
             //id tale
-            id_tale = data['id_tale'];
-            document.querySelector('#currentTaleId').innerHTML = data['id_tale'];
-            //title
-            document.querySelector('#title').innerHTML = data['title'];
-            //author
-            getTaleAuthor(data['id_tale']);
-            //1st text
-            getTaleText(data['id_first_text']);
+            if(data['id_tale'] == document.querySelector('#currentTaleId').innerHTML){
+                getRandomTale();
+            }else{
+                id_tale = data['id_tale'];
+                document.querySelector('#currentTaleId').innerHTML = data['id_tale'];
+                //title
+                document.querySelector('#title').innerHTML = data['title'];
+                //author
+                getTaleAuthor(data['id_tale']);
+                //1st text
+                getTaleText(data['id_first_text']);
+            }
     })
     .catch((error) => {
             console.error("Error tale");

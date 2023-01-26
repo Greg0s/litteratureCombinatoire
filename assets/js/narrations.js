@@ -35,8 +35,12 @@ function getRandomNarrationNewGroup(sameGroup){
         if(sameGroup){
             generateNarrationSameGroup(document.querySelector("#groupnum").innerHTML);
         }else{
-            document.querySelector("#groupnum").innerHTML = data['group_num'];
-            generateNarrationSameGroup(data['group_num']);
+            if(data['group_num'] ==  document.querySelector("#groupnum").innerHTML){
+                getRandomNarrationNewGroup(false);
+            }else{
+                document.querySelector("#groupnum").innerHTML = data['group_num'];
+                generateNarrationSameGroup(data['group_num']);
+            }
         }
     }) 
     .catch((error) => {
@@ -46,9 +50,9 @@ function getRandomNarrationNewGroup(sameGroup){
     });
 }
 
-function getRandomNarration(num, group_num){
+function getNarrationText(num, id_narration){
     //console.log(group_num);
-    fetch('http://localhost/narration/text', { 'body': JSON.stringify({ 'num': num, 'group_num': group_num }), method: 'POST'})
+    fetch('http://localhost/narration/text', { 'body': JSON.stringify({ 'num': num, 'id_narration': id_narration }), method: 'POST'})
     .then((response) => {
         if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
                             // check for any errors.
@@ -61,9 +65,30 @@ function getRandomNarration(num, group_num){
     .then((data) => {
             // This is where you handle what to do with the response.
             id = "#line" + num;
-            console.log(id)
+            //console.log(id)
             document.querySelector(id).innerHTML = data['text'];
             
+    })
+    .catch((error) => {
+            // This is where you handle errors.
+            console.error("Error text narration");
+    });
+}
+
+function getRandomNarration(num, group_num){
+    //console.log(group_num);
+    fetch('http://localhost/narration/textGroup/' +  group_num)
+    .then((response) => {
+        if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
+                            // check for any errors.
+            // In case of an error, throw.
+            throw new Error("Something went wrong!");
+        }
+        //console.log(response.json());
+        return response.json(); // Parse the JSON data.
+    })
+    .then((data) => {
+        getNarrationText(num, data['id_narration']);            
     })
     .catch((error) => {
             // This is where you handle errors.

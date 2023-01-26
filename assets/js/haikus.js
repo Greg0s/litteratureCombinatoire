@@ -38,8 +38,12 @@ function getRandomHaikuNewGroup(sameGroup){
           if(sameGroup){
               generateHaikuSameGroup(document.querySelector("#groupnum").innerHTML);
           }else{
-              document.querySelector("#groupnum").innerHTML = data['group_num'];
-              generateHaikuSameGroup(data['group_num']);
+              if(data['group_num'] == document.querySelector("#groupnum").innerHTML){
+                getRandomHaikuNewGroup(false);
+              }else{
+                document.querySelector("#groupnum").innerHTML = data['group_num'];
+                generateHaikuSameGroup(data['group_num']);
+              }
           }
           //document.querySelector('#groupnum').innerHTML = data['group_num'];
   })
@@ -50,9 +54,9 @@ function getRandomHaikuNewGroup(sameGroup){
   });
 }
 
-function getRandomHaiku(num, group_num){
+function getHaikuText(num, id_haiku){
   //console.log(group_num);
-  fetch('http://localhost/haiku/text', { 'body': JSON.stringify({ 'num': num, 'group_num': group_num }), method: 'POST'})
+  fetch('http://localhost/haiku/text', { 'body': JSON.stringify({ 'num': num, 'id_haiku': id_haiku }), method: 'POST'})
   .then((response) => {
       if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
                           // check for any errors.
@@ -64,10 +68,33 @@ function getRandomHaiku(num, group_num){
   })
   .then((data) => {
           // This is where you handle what to do with the response.
+          
           id = "#line" + num;
           //console.log(id)
           document.querySelector(id).innerHTML = data['text'];
 
+  })
+  .catch((error) => {
+          // This is where you handle errors.
+          console.error("Error text haiku");
+  });
+}
+
+function getRandomHaiku(num, group_num){
+  //console.log(group_num);
+  fetch('http://localhost/haiku/textGroup/' + group_num)
+  .then((response) => {
+      if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
+                          // check for any errors.
+          // In case of an error, throw.
+          throw new Error("Something went wrong!");
+      }
+      //console.log(response.json());
+      return response.json(); // Parse the JSON data.
+  })
+  .then((data) => {
+          // This is where you handle what to do with the response.
+          getHaikuText(num, data['id_haiku']);
   })
   .catch((error) => {
           // This is where you handle errors.
