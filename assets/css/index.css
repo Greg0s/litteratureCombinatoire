@@ -16,6 +16,12 @@ a{
     text-decoration-thickness: 0.05rem;
 }
 
+.project a:hover{
+    background-color: black;
+    color : white;
+    text-decoration: none;
+}
+
 /*============  LUCHY  ============*/
 .left {
     text-align: start;
