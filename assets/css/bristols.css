@@ -73,6 +73,7 @@ button:hover {
     overflow: hidden;
     position: absolute;
     top : 0%;
+    left : 0%;
     transform: translateX(-100%);
     width : fit-content;
     white-space: nowrap;
@@ -85,7 +86,7 @@ button:hover {
     overflow: hidden;
     /* Fonctionne avec toutes les tailles */
     position: relative;
-    width : 214vh ;
+    width : 243vh ;
     height : 135vw ;
     /*transform: translateY(-50%);*/
     /* pour rotate on enlève le translate et on rajoute le rotate */
@@ -94,9 +95,6 @@ button:hover {
 }
 
 .bgTextVertical {
-    position: absolute;
-    top : 25%;
-    left : 25%;
     white-space: nowrap;
     font-size: 1.2em;
 }
@@ -140,39 +138,171 @@ button:hover {
 #bgtext33 {}
 
 
-#bgtext34 {}
-#bgtext35 {}
-#bgtext36 {}
-#bgtext37 {}
-#bgtext38 {}
-#bgtext39 {}
-#bgtext40 {}
-#bgtext41 {}
-#bgtext42 {}
-#bgtext43 {}
-#bgtext44 {}
-#bgtext45 {}
-#bgtext46 {}
-#bgtext47 {}
-#bgtext48 {}
-#bgtext49 {}
-#bgtext50 {}
-#bgtext51 {}
-#bgtext52 {}
-#bgtext53 {}
-#bgtext54 {}
-#bgtext55 {}
-#bgtext56 {}
-#bgtext57 {}
-#bgtext58 {}
-#bgtext59 {}
-#bgtext60 {}
-#bgtext61 {}
-#bgtext62 {}
-#bgtext63 {}
-#bgtext64 {}
-#bgtext65 {}
-#bgtext66 {}
+#bgtext34 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext35 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext36 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext37 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext38 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext39 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext40 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext41 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext42 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext43 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext44 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext45 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext46 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext47 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext48 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext49 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext50 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext51 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext52 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext53 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext54 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext55 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext56 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext57 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext58 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext59 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext60 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext61 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext62 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext63 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext64 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext65 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
+#bgtext66 {
+    position: absolute;
+    top : 0%;
+    left : 20%;
+}
 
 
 
@@ -180,17 +310,17 @@ button:hover {
 
 
 .animateHorizontal {
-    animation: 30s linear infinite scrollHorizontalTxt ;
+    animation: 5s linear infinite scrollHorizontalTxt ;
 }
 
 
 .animateVertical {
-    animation : 20s linear infinite scrollVerticalTxt ; 
+    animation : 5s linear infinite scrollVerticalTxt ; 
 }
 
   @keyframes scrollHorizontalTxt {
     0%{
-      transform: translate(-100vw, 0);
+      transform: translate(-77vw, 0);
     }
     100% {
 
@@ -200,9 +330,9 @@ button:hover {
 
   @keyframes scrollVerticalTxt {
     0%{
-        transform : translate(-50vw, 0);
+        transform : translate(30vw, 0);
     }
     100%{
-        transform : translate(70vw, 0);
+        transform : translate(120vw, 0);
     }
   }

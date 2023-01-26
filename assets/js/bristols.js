@@ -82,8 +82,6 @@ function getTextsFromSerie(id){
       idToWrite = "#text" + cpt;
       idToAnimateHorizontal = "#bgtext" + cpt;
       idToAnimateVertical = "#bgtext" + (cpt + 33); 
-      console.log(idToAnimateHorizontal);
-      console.log(idToAnimateVertical);
       
       //console.log(idToWrite);
       document.querySelector(idToWrite).innerHTML = element['text'];
@@ -123,12 +121,15 @@ function changeVers(){
   //get compteur
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActive = "#text" + cpt;
+  cptVerticals = parseInt(cpt) + 33;
 
   console.log(idAddActive);
   document.querySelector(idAddActive).classList.add("active");
-  if(cpt < 34){
+  if(cpt < 34 && cptVerticals < 66){
     idAddActiveBg = "#bgtext" + cpt;
+    idAddActiveBgVertical = "#bgtext" + cptVerticals;
     document.querySelector(idAddActiveBg).classList.add("active");
+    document.querySelector(idAddActiveBgVertical).classList.add("active");
   }
   cpt -= 1;
   idRmActive = "#text" + cpt;
@@ -143,14 +144,17 @@ function changeVers(){
 function play() {
    
   cpt = document.querySelector("#cpt").innerHTML;
-  idAddActiveBg = "#bgtext" + (cpt-2);
-  idAddActiveBgVertical = "#bgtext" + (cpt+31);
-  console.log(idAddActiveBg);
+  idAddActiveBgHorizontal = "#bgtext" + (cpt - 2);
+
+  idAddActiveBgVertical = "#bgtext" + (parseInt(cpt) + 31);
+  console.log(idAddActiveBgHorizontal);
+  console.log(idAddActiveBgVertical);
+
 
   window.requestAnimationFrame(function(time) {
     window.requestAnimationFrame(function(time) {
-        document.querySelector(idAddActiveBg).className = "bgTextHorizontal animateHorizontal";
-        document.querySelector(idAddActiveBg).className = "bgTextVertical animateVertical";
+        document.querySelector(idAddActiveBgHorizontal).className = "bgTextHorizontal animateHorizontal";
+        document.querySelector(idAddActiveBgVertical).className = "bgTextVertical animateVertical";
     });
   });   
 }
@@ -167,7 +171,8 @@ function placeHorizontal ()
 function placeVertical () {
 
   cpt = document.querySelector("#cpt").innerHTML;
-  iddAddActiveBg = "#bgtext" + (cpt+31) ;  //index cpt - 2 + 33 to get the vertical texts spans ids
+  iddAddActiveBg = "#bgtext" + (parseInt(cpt)+31) ;  //index cpt - 2 + 33 to get the vertical texts spans ids
+
   text = document.querySelector(idAddActiveBg) ;
   text.style.top = getRandomArbitrary(15,100) + '%';
 }
