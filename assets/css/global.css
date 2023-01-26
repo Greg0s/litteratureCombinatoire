@@ -84,6 +84,19 @@ button:hover {
     cursor : pointer;
 }
 
+.footer{
+    display: flex;
+    justify-content: center;
+   flex-wrap: wrap;
+    padding: 1em;
+}
+
+
+.line{
+    width: 90%;
+    border-top: 1px solid #000;
+}
+
 /* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 930px) {

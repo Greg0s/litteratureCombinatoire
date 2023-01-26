@@ -1,20 +1,36 @@
 .ligne{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 3em;
 }
 
 img{
  
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
+}
+.titre{
+    margin-left: 2em;
+    font-size: larger;
 }
 
-.ligne p{
+.txtIMG{
     width: 50%;
+    text-align: justify;
+    margin: 2em;
+}
+
+.txtseul{
+    width:80%;
     text-align: justify;
 }
 
+.center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .cercles{
     justify-content: space-between;
 }

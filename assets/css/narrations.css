@@ -38,7 +38,7 @@ p {
     align-items: center;
 }
 
-footer{
+.btnContaineur{
     position: relative;
     z-index: 2;
 }
