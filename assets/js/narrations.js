@@ -35,8 +35,12 @@ function getRandomNarrationNewGroup(sameGroup){
         if(sameGroup){
             generateNarrationSameGroup(document.querySelector("#groupnum").innerHTML);
         }else{
-            document.querySelector("#groupnum").innerHTML = data['group_num'];
-            generateNarrationSameGroup(data['group_num']);
+            if(data['group_num'] ==  document.querySelector("#groupnum").innerHTML){
+                getRandomNarrationNewGroup(false);
+            }else{
+                document.querySelector("#groupnum").innerHTML = data['group_num'];
+                generateNarrationSameGroup(data['group_num']);
+            }
         }
     }) 
     .catch((error) => {

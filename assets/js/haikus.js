@@ -38,8 +38,12 @@ function getRandomHaikuNewGroup(sameGroup){
           if(sameGroup){
               generateHaikuSameGroup(document.querySelector("#groupnum").innerHTML);
           }else{
-              document.querySelector("#groupnum").innerHTML = data['group_num'];
-              generateHaikuSameGroup(data['group_num']);
+              if(data['group_num'] == document.querySelector("#groupnum").innerHTML){
+                getRandomHaikuNewGroup(false);
+              }else{
+                document.querySelector("#groupnum").innerHTML = data['group_num'];
+                generateHaikuSameGroup(data['group_num']);
+              }
           }
           //document.querySelector('#groupnum').innerHTML = data['group_num'];
   })
