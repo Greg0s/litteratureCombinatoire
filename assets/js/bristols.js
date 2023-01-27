@@ -174,8 +174,8 @@ function placeVertical () {
   idAddActiveBg = "#bgtext" + (parseInt(cpt)+31) ;  //index cpt - 2 + 33 to get the vertical texts spans ids
   console.log(idAddActiveBg);
   text = document.querySelector(idAddActiveBg) ;
-  text.style.top = getRandomArbitrary(0,93) + '%';
-  console.log(text.style.top);
+  text.style.left = getRandomVertical(0,93) + '%';
+  console.log(text.style.left);
 }
 
 
@@ -218,3 +218,11 @@ const handleIncrement = () => {
 function getRandomArbitrary(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
+
+
+function getRandomVertical(min,max) {
+  random_sign = Math.cos( Math.PI * Math.round( Math.random() ) );
+  return random_sign * Math.floor(Math.random() * (max - min) + min);
+}
+
+
