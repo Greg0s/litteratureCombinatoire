@@ -165,16 +165,17 @@ function placeHorizontal ()
   idAddActiveBg = "#bgtext" + (cpt-2);
   
   text = document.querySelector(idAddActiveBg) ;
-  text.style.top = getRandomArbitrary(15,100) + '%';
+  text.style.top = getRandomArbitrary(15,93) + '%';
 }
 
 function placeVertical () {
 
   cpt = document.querySelector("#cpt").innerHTML;
-  iddAddActiveBg = "#bgtext" + (parseInt(cpt)+31) ;  //index cpt - 2 + 33 to get the vertical texts spans ids
-
+  idAddActiveBg = "#bgtext" + (parseInt(cpt)+31) ;  //index cpt - 2 + 33 to get the vertical texts spans ids
+  console.log(idAddActiveBg);
   text = document.querySelector(idAddActiveBg) ;
-  text.style.top = getRandomArbitrary(15,100) + '%';
+  text.style.top = getRandomArbitrary(0,93) + '%';
+  console.log(text.style.top);
 }
 
 
