@@ -62,3 +62,7 @@ p {
 .arrow-rigth-SVG:hover .arrow-right{
     transform: translateX(20px);
 }
+
+.marginBtm{
+    margin-bottom: 3em;
+}
