@@ -1,8 +1,9 @@
 main {
-    margin-top : 16em; 
+    margin-top : 5em; 
     width: 100%;
     height: auto;
     text-align: center;
+    overflow : hidden;
 }
 
 html
@@ -19,7 +20,7 @@ body
     margin: 0;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 button
@@ -36,9 +37,10 @@ button
     height : 8em ;
     /*center button*/
     position: absolute;
-    top : 50vh;
-    left : 50vw;
+    top : 56vh;
+    left : 48vw;
     transform: translate(-50%, -50%);
+    z-index : 1;
 }
 
 
@@ -70,8 +72,8 @@ button:hover {
 .bgTextHorizontal {
     overflow: hidden;
     position: absolute;
-    top : 0% ;
-    left : 0% ;
+    top : 0%;
+    left : 0%;
     transform: translateX(-100%);
     width : fit-content;
     white-space: nowrap;
@@ -79,108 +81,51 @@ button:hover {
     z-index: -1;
 }
 
-.bgtext {
-    transform: rotate(-90deg);
+
+.container {
+    overflow: hidden;
+    /* Fonctionne avec toutes les tailles */
+    position: relative;
+    width : 100vw ;
+    height : 100vh ;
+    /* pour rotate on enlève le translate et on rajoute le rotate */
+    z-index : -1;
 }
 
-
-#bgtext1 {}
-#bgtext2 {}
-#bgtext3 {}
-#bgtext4 {}
-#bgtext5 {}
-#bgtext6 {}
-#bgtext7 {}
-#bgtext8 {}
-#bgtext9 {}
-#bgtext10 {}
-#bgtext11 {}
-#bgtext12 {}
-#bgtext13 {}
-#bgtext14 {}
-#bgtext15 {}
-#bgtext16 {}
-#bgtext17 {}
-#bgtext18 {}
-#bgtext19 {}
-#bgtext20 {}
-#bgtext21 {}
-#bgtext22 {}
-#bgtext23 {}
-#bgtext24 {}
-#bgtext25 {}
-#bgtext26 {}
-#bgtext27 {}
-#bgtext28 {}
-#bgtext29 {}
-#bgtext30 {}
-#bgtext31 {}
-#bgtext32 {}
-#bgtext33 {}
-
-
-#bgtext34 {}
-#bgtext35 {}
-#bgtext36 {}
-#bgtext37 {}
-#bgtext38 {}
-#bgtext39 {}
-#bgtext40 {}
-#bgtext41 {}
-#bgtext42 {}
-#bgtext43 {}
-#bgtext44 {}
-#bgtext45 {}
-#bgtext46 {}
-#bgtext47 {}
-#bgtext48 {}
-#bgtext49 {}
-#bgtext50 {}
-#bgtext51 {}
-#bgtext52 {}
-#bgtext53 {}
-#bgtext54 {}
-#bgtext55 {}
-#bgtext56 {}
-#bgtext57 {}
-#bgtext58 {}
-#bgtext59 {}
-#bgtext60 {}
-#bgtext61 {}
-#bgtext62 {}
-#bgtext63 {}
-#bgtext64 {}
-#bgtext65 {}
-#bgtext66 {}
-
-
-
-
+.bgTextVertical {
+    position: absolute;
+    bottom : 0;
+    right : 0;
+    transform: translateY(25vh) rotate(-90deg);
+    white-space: nowrap;
+    font-size: 1.2em;
+}
 
 
 .animateHorizontal {
-    animation: 10s linear infinite scrollHorizontalTxt ;
+    animation: 20s linear infinite scrollHorizontalTxt ;
 }
 
+
 .animateVertical {
-    animation : 10s linear infinite scrollVerticalTxt ; 
+    animation : 15s linear infinite scrollVerticalTxt ; 
 }
 
   @keyframes scrollHorizontalTxt {
     0%{
-      transform: translate(-100vw, 0);
+      transform: translateX(-25vw);
     }
     100% {
 
-      transform: translate(100vw, 0);
+      transform: translateX(125vw);
     }
   }
 
   @keyframes scrollVerticalTxt {
     0%{
-        transform : translateY(-100vh, 0);
+        transform : translateY(25vh) rotate(-90deg);
     }
     100%{
-        transform : translateY(100vh,0);
+        transform : translateY(-125vh) rotate(-90deg);
     }
   }

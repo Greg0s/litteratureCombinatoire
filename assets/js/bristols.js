@@ -32,6 +32,10 @@ $(document).ready(function() {
     foreachdocument.querySelectorAll('.bgTextHorizontal').forEach(element => {
       element.classList.remove('active');
     });
+
+    foreachdocument.querySelectorAll('.bgTextVertical').forEach(element => {
+      element.classList.remove('active');
+    });
   })
 
   // const restart = document.getElementById("text34");
@@ -77,12 +81,13 @@ function getTextsFromSerie(id){
     data.forEach(element => {
       idToWrite = "#text" + cpt;
       idToAnimateHorizontal = "#bgtext" + cpt;
-      idToAnimateVertical = "#bgtext" + (cpt+33);
+      idToAnimateVertical = "#bgtext" + (cpt + 33); 
       
       //console.log(idToWrite);
       document.querySelector(idToWrite).innerHTML = element['text'];
       document.querySelector(idToAnimateHorizontal).innerHTML = element['text'];
       document.querySelector(idToAnimateVertical).innerHTML = element['text'];
+
       //console.log(element['text']);
       cpt++;
     });
@@ -116,12 +121,15 @@ function changeVers(){
   //get compteur
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActive = "#text" + cpt;
+  cptVerticals = parseInt(cpt) + 33;
 
   console.log(idAddActive);
   document.querySelector(idAddActive).classList.add("active");
-  if(cpt < 34){
+  if(cpt < 34 && cptVerticals < 66){
     idAddActiveBg = "#bgtext" + cpt;
+    idAddActiveBgVertical = "#bgtext" + cptVerticals;
     document.querySelector(idAddActiveBg).classList.add("active");
+    document.querySelector(idAddActiveBgVertical).classList.add("active");
   }
   cpt -= 1;
   idRmActive = "#text" + cpt;
@@ -136,14 +144,17 @@ function changeVers(){
 function play() {
    
   cpt = document.querySelector("#cpt").innerHTML;
-  idAddActiveBg = "#bgtext" + (cpt-2);
-  idAddActiveBgVertical = "#bgtext" + (cpt-2+33);
-  console.log(idAddActiveBg);
+  idAddActiveBgHorizontal = "#bgtext" + (cpt - 2);
+
+  idAddActiveBgVertical = "#bgtext" + (parseInt(cpt) + 31);
+  console.log(idAddActiveBgHorizontal);
+  console.log(idAddActiveBgVertical);
+
 
   window.requestAnimationFrame(function(time) {
     window.requestAnimationFrame(function(time) {
-        document.querySelector(idAddActiveBg).className = "bgTextHorizontal animateHorizontal";
-        document.querySelector(idAddActiveBgVertical).className = "bgTextHorizontal animateVertical";
+        document.querySelector(idAddActiveBgHorizontal).className = "bgTextHorizontal animateHorizontal";
+        document.querySelector(idAddActiveBgVertical).className = "bgTextVertical animateVertical";
     });
   });   
 }
@@ -154,18 +165,19 @@ function placeHorizontal ()
   idAddActiveBg = "#bgtext" + (cpt-2);
   
   text = document.querySelector(idAddActiveBg) ;
-  text.style.top = getRandomArbitrary(15,100) + '%';
+  text.style.top = getRandomArbitrary(15,93) + '%';
 }
 
-function placeVertical ()
-{
+function placeVertical () {
+
   cpt = document.querySelector("#cpt").innerHTML;
-  idAddActiveBg = "#bgtext" + (cpt-2+33);
-  
+  idAddActiveBg = "#bgtext" + (parseInt(cpt)+31) ;  //index cpt - 2 + 33 to get the vertical texts spans ids
+  console.log(idAddActiveBg);
   text = document.querySelector(idAddActiveBg) ;
-  text.style.left = 50 + "%";
-  /*text.style.top = getRandomArbitrary(0,100) + '%';*/
+  text.style.top = getRandomArbitrary(0,93) + '%';
+  console.log(text.style.top);
 }
+
 
 /*function changeVers(data)
 {
