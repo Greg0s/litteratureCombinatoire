@@ -8,9 +8,11 @@ $(document).ready(function() {
     // console.log(document.querySelector("#cpt").innerHTML);
     if(document.querySelector("#cpt").innerHTML < 36){
       changeVers();
-      placeHorizontal();
-      placeVertical();
-      play();
+      if(document.querySelector("#cpt").innerHTML > 2 && document.querySelector("#cpt").innerHTML < 34){
+        placeHorizontal();
+        placeVertical();
+        play();
+      }
       console.log(cptClick);
       cptClick ++;
     }
@@ -29,12 +31,11 @@ $(document).ready(function() {
     document.querySelector("#text0").classList.add('active');
     document.querySelector("#cpt").innerHTML = 1;
     
-    foreachdocument.querySelectorAll('.bgTextHorizontal').forEach(element => {
-      element.classList.remove('active');
+    document.querySelectorAll('.bgTextHorizontal').forEach(element => {
+      element.classList.remove('animateHorizontal');
     });
-
-    foreachdocument.querySelectorAll('.bgTextVertical').forEach(element => {
-      element.classList.remove('active');
+    document.querySelectorAll('.bgTextVertical').forEach(element => {
+      element.classList.remove('animateVertical');
     });
   })
 
