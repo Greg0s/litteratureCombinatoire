@@ -99,6 +99,7 @@ button:hover {
     transform: translateY(25vh) rotate(-90deg);
     white-space: nowrap;
     font-size: 1.2em;
+    opacity: 0.5;
 }
 
 

@@ -19,7 +19,7 @@ $(document).ready(function() {
   })
 
   //reload next bristols in advance when clicking author
-  const reload = document.getElementById("text34");
+  const reload = document.getElementById("text35");
   reload.addEventListener('click', function(){
     getRandomBristolSerie();
   })
