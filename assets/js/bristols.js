@@ -44,6 +44,45 @@ $(document).ready(function() {
   //   restart.innerHTML = "Recommencer";
   // }
 
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~SOCKET INTERACTION~~~~~~~~~~~~~~~~~~~~~~~//
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+  let socket = io("http://localhost:5000");
+
+  let btn = document.querySelector("#button");
+
+  btn.addEventListener('click', (e) => {
+      //push();
+      socket.emit('clickBristol');
+      // if (input.value) {
+      //     push(input.value);
+      //     socket.emit('test');
+      //     input.value = '';        
+      // }
+  });
+
+  socket.on('receiveEvent', function() {
+      push();
+  });
+
+  function push() {
+    alert('yo');
+    if(document.querySelector("#cpt").innerHTML < 36){
+      changeVers();
+      if(document.querySelector("#cpt").innerHTML > 2 && document.querySelector("#cpt").innerHTML < 34){
+        placeHorizontal();
+        placeVertical();
+        play();
+      }
+      console.log(cptClick);
+      cptClick ++;
+    }
+      // let item = document.createElement('p');
+      // item.textContent = msg;
+      // document.querySelector('.text').appendChild(item);
+  }
+
 })
 
 function getRandomBristolSerie(){
