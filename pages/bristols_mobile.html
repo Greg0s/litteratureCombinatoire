@@ -12,7 +12,25 @@
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script type="text/javascript" src="../assets/js/header.js"></script>
     <script type="text/javascript" src="../assets/js/bristols_mobile.js"></script>
-    
+    <style>
+        #cpt{
+            display: inline; 
+            
+        }
+        button:hover{
+            background-color: white;
+            color:black;
+        }
+        .divCpt{
+            display: block;
+            top : 62vh;
+            left : 50%;
+            position: absolute;
+            margin: auto;
+            z-index: 2;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
 <main>
@@ -26,7 +44,9 @@
             <!--Restart-->
             <span class="text" id="text3">Recommencer</span>
         </button>
-        <span id="cpt"></span>
+        <div class="divCpt">
+            <span id="cpt"></span>/36
+        </div>
 
 </main>
 <!-- <footer></footer> onclick= "handleIncrement()"-->
