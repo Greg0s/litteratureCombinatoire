@@ -1,22 +1,7 @@
 $(document).ready(function() {
-  getRandomBristolSerie();
-  //document.getElementById("text").innerHTML = "mélangez les bristols";
   document.querySelector("#cpt").innerHTML = 1;
   const incrementCount = document.getElementById("button");
   cptClick = 0;
-  incrementCount.addEventListener('click', function(){
-    // console.log(document.querySelector("#cpt").innerHTML);
-    if(document.querySelector("#cpt").innerHTML < 36){
-      changeVers();
-      if(document.querySelector("#cpt").innerHTML > 2 && document.querySelector("#cpt").innerHTML < 34){
-        placeHorizontal();
-        placeVertical();
-        play();
-      }
-      console.log(cptClick);
-      cptClick ++;
-    }
-  })
 
   //reload next bristols in advance when clicking author
   // const reload = document.getElementById("text35");
@@ -24,7 +9,7 @@ $(document).ready(function() {
   //   getRandomBristolSerie();
   // })
   
-  const restartBtn = document.getElementById("text35");
+  const restartBtn = document.getElementById("text3");
   restartBtn.onclick = restart;
 
   function restart(){
@@ -32,13 +17,7 @@ $(document).ready(function() {
     document.querySelector("#text35").classList.remove('active');
     document.querySelector("#text0").classList.add('active');
     document.querySelector("#cpt").innerHTML = 1;
-    
-    document.querySelectorAll('.bgTextHorizontal').forEach(element => {
-      element.classList.remove('animateHorizontal');
-    });
-    document.querySelectorAll('.bgTextVertical').forEach(element => {
-      element.classList.remove('animateVertical');
-    });
+
   }
 
   // const restart = document.getElementById("text34");
@@ -83,9 +62,6 @@ $(document).ready(function() {
       console.log(cptClick);
       cptClick ++;
     }
-      // let item = document.createElement('p');
-      // item.textContent = msg;
-      // document.querySelector('.text').appendChild(item);
   }
 
 })
@@ -143,41 +119,20 @@ function getTextsFromSerie(id){
   });
 }
 
-function getAuthor(id){
-  url = 'http://localhost/author/' + id;
-  fetch(url)
-  .then((response) => {
-      if(!response.ok){ 
-          throw new Error("Something went wrong!");
-      } 
-      return response.json(); 
-  })
-  .then((data) => {
-    document.querySelector("#text34").innerHTML = "Par " + data['first_name'] + " " + data['name'];
-    console.log(document.querySelector("#text34").innerHTML);
-  })
-  .catch((error) => {
-          // This is where you handle errors.
-          console.error("Error text bristols");
-  });
-}
-
 function changeVers(){
   //get compteur
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActive = "#text" + cpt;
-  cptVerticals = parseInt(cpt) + 33;
 
   console.log(idAddActive);
-  document.querySelector(idAddActive).classList.add("active");
-  if(cpt < 34 && cptVerticals < 66){
-    idAddActiveBg = "#bgtext" + cpt;
-    idAddActiveBgVertical = "#bgtext" + cptVerticals;
-    document.querySelector(idAddActiveBg).classList.add("active");
-    document.querySelector(idAddActiveBgVertical).classList.add("active");
+  if(cpt >= 34){
+    num = cpt - 32;
+    idAddActive = "#bgtext" + num;
+    document.querySelector(idAddActive).classList.add("active");
   }
   cpt -= 1;
-  idRmActive = "#text" + cpt;
+  num = cpt - 32;
+  idRmActive = "#text" + num;
   //console.log(idRmActive);
   document.querySelector(idRmActive).classList.remove("active");
   //set new compteur  
