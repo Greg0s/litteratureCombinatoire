@@ -19,14 +19,16 @@ $(document).ready(function() {
   })
 
   //reload next bristols in advance when clicking author
-  const reload = document.getElementById("text35");
-  reload.addEventListener('click', function(){
-    getRandomBristolSerie();
-  })
+  // const reload = document.getElementById("text35");
+  // reload.addEventListener('click', function(){
+  //   getRandomBristolSerie();
+  // })
   
-  const restart = document.getElementById("text35");
-  restart.addEventListener('click', function(){
-    //getRandomBristolSerie();
+  const restartBtn = document.getElementById("text35");
+  restartBtn.onclick = restart;
+
+  function restart(){
+    getRandomBristolSerie();
     document.querySelector("#text35").classList.remove('active');
     document.querySelector("#text0").classList.add('active');
     document.querySelector("#cpt").innerHTML = 1;
@@ -37,7 +39,7 @@ $(document).ready(function() {
     document.querySelectorAll('.bgTextVertical').forEach(element => {
       element.classList.remove('animateVertical');
     });
-  })
+  }
 
   // const restart = document.getElementById("text34");
   // restart.onmouseover = function(){
@@ -53,24 +55,27 @@ $(document).ready(function() {
   let btn = document.querySelector("#button");
 
   btn.addEventListener('click', (e) => {
-      //push();
       socket.emit('clickBristol');
-      // if (input.value) {
-      //     push(input.value);
-      //     socket.emit('test');
-      //     input.value = '';        
-      // }
+  });
+
+  restartBtn.addEventListener('click', (e) => {
+    socket.emit('restartBristol');
   });
 
   socket.on('receiveEvent', function() {
       push();
   });
 
+  socket.on('receiveRestart', function() {
+      restart();
+  });
+
   function push() {
-    alert('yo');
-    if(document.querySelector("#cpt").innerHTML < 36){
+    // alert('yo');
+    cpt = document.querySelector("#cpt").innerHTML;
+    if(cpt < 36){
       changeVers();
-      if(document.querySelector("#cpt").innerHTML > 2 && document.querySelector("#cpt").innerHTML < 34){
+      if(cpt > 2 && cpt < 34){
         placeHorizontal();
         placeVertical();
         play();
