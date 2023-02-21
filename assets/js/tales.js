@@ -28,7 +28,7 @@ $(document).ready(function(){
 // choice1.onclick = getNextText(choice1.id);
 
 function getRandomTale(){
-    url = 'http://localhost/tale';
+    url = routeUrl + '/tale';
     fetch(url)
     .then((response) => {
         if(!response.ok){ 
@@ -58,7 +58,7 @@ function getRandomTale(){
 }
 
 function getTale(id){
-    url = 'http://localhost/talebyid/' + id;
+    url = routeUrl + '/talebyid/' + id;
     fetch(url)
     .then((response) => {
         if(!response.ok){ 
@@ -80,7 +80,7 @@ function getTale(id){
 }
 
 function getTaleAuthor(id){
-    url = 'http://localhost/tale/author/' + id;
+    url = routeUrl + '/tale/author/' + id;
     fetch(url)
     .then((response) => {
         if(!response.ok){ 
@@ -99,7 +99,7 @@ function getTaleAuthor(id){
 }
 
 function getTaleText(id){
-    url ='http://localhost/tale/text/' + id;
+    url = routeUrl + '/tale/text/' + id;
     // let params = [['id', $id], ['num', $num]]
     // url.search = new URLSearchParams(params).toString();
     fetch(url)
@@ -123,7 +123,7 @@ function getTaleText(id){
 }
 
 function getTextChoices(id_text, choice_num){
-    url ='http://localhost/text/choices/' + id_text;
+    url = routeUrl + '/text/choices/' + id_text;
     fetch(url)
     .then((response) => {
         if(!response.ok){
