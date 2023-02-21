@@ -25,7 +25,7 @@ $(document).ready(function() {
   //~~~~~~~~~~~~~~~~~SOCKET INTERACTION~~~~~~~~~~~~~~~~~~~~~~~//
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-  let socket = io("http://localhost:5000");
+  let socket = io("http://10.255.255.1:5000");
 
   const btn = document.querySelector("#button");
   const restartBtn = document.getElementById("text3");
