@@ -1,5 +1,3 @@
-routeUrl = 'https://combimac-back.oulico.fr';
-
 $(document).ready(function() {
   getRandomBristolSerie();
   //document.getElementById("text").innerHTML = "mélangez les bristols";

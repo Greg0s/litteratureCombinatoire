@@ -22,7 +22,7 @@ $(document).ready(function(){
 });
 
 function getRandomHaikuNewGroup(sameGroup){
-  url = 'http://localhost/haiku';
+  url = routeUrl + '/haiku';
   fetch(url)
   .then((response) => {
       if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
@@ -56,7 +56,7 @@ function getRandomHaikuNewGroup(sameGroup){
 
 function getHaikuText(num, id_haiku){
   //console.log(group_num);
-  fetch('http://localhost/haiku/text', { 'body': JSON.stringify({ 'num': num, 'id_haiku': id_haiku }), method: 'POST'})
+  fetch(routeUrl + '/haiku/text', { 'body': JSON.stringify({ 'num': num, 'id_haiku': id_haiku }), method: 'POST'})
   .then((response) => {
       if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
                           // check for any errors.
@@ -82,7 +82,7 @@ function getHaikuText(num, id_haiku){
 
 function getRandomHaiku(num, group_num){
   //console.log(group_num);
-  fetch('http://localhost/haiku/textGroup/' + group_num)
+  fetch(routeUrl +  '/haiku/textGroup/' + group_num)
   .then((response) => {
       if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
                           // check for any errors.
@@ -104,7 +104,7 @@ function getRandomHaiku(num, group_num){
 
 function getHaikuAuthorGroup(group_num){
   //console.log(group_num);
-  url = 'http://localhost/haiku/authorGroup/' + group_num;
+  url = routeUrl + '/haiku/authorGroup/' + group_num;
   //console.log(url);
   fetch(url)
   .then((response) => {
@@ -132,7 +132,7 @@ function getHaikuAuthorGroup(group_num){
 
 function getHaikuAuthor(id_author, onlyOne){
   //console.log(group_num);
-  fetch('http://localhost/haiku/author/' + id_author)
+  fetch(routeUrl + '/haiku/author/' + id_author)
   .then((response) => {
       if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
                           // check for any errors.

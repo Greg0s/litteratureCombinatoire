@@ -1,3 +1,6 @@
+// routeUrl = 'http://localhost';
+routeUrl = 'https://combimac-back.oulico.fr';
+
 document.write(`
 <header>
       
