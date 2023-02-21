@@ -1,3 +1,5 @@
+routeUrl = 'https://combimac-back.oulico.fr';
+
 $(document).ready(function() {
   getRandomBristolSerie();
   //document.getElementById("text").innerHTML = "mélangez les bristols";
@@ -91,7 +93,7 @@ $(document).ready(function() {
 })
 
 function getRandomBristolSerie(){
-  url = 'http://localhost/bristols';
+  url = routeUrl + '/bristols';
   fetch(url)
   .then((response) => {
       if(!response.ok){ 
@@ -112,7 +114,7 @@ function getRandomBristolSerie(){
 
 
 function getTextsFromSerie(id){
-  url = 'http://localhost/bristols/serie/' + id;
+  url = routeUrl + '/bristols/serie/' + id;
   fetch(url)
   .then((response) => {
       if(!response.ok){ 
@@ -144,7 +146,7 @@ function getTextsFromSerie(id){
 }
 
 function getAuthor(id){
-  url = 'http://localhost/author/' + id;
+  url = routeUrl + '/author/' + id;
   fetch(url)
   .then((response) => {
       if(!response.ok){ 
