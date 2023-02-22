@@ -242,9 +242,6 @@ navbar{
 
 /* ~~~~~~~~~~~~~~Add media queries for responsiveness~~~~~~~~~~~~~~ */
 @media screen and (max-width: 930px) {
-    header{
-        position : fixed;
-    }
     header .logo{
         text-align: left;
     }
