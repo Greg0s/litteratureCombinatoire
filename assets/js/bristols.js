@@ -13,7 +13,7 @@ $(document).ready(function() {
         placeVertical();
         play();
       }
-      console.log(cptClick);
+      //console.log(cptClick);
       cptClick ++;
     }
   })
@@ -80,12 +80,10 @@ $(document).ready(function() {
         placeVertical();
         play();
       }
-      console.log(cptClick);
+      //console.log(cptClick);
       cptClick ++;
     }
-      // let item = document.createElement('p');
-      // item.textContent = msg;
-      // document.querySelector('.text').appendChild(item);
+
   }
 
 })
@@ -154,7 +152,7 @@ function getAuthor(id){
   })
   .then((data) => {
     document.querySelector("#text34").innerHTML = "Par " + data['first_name'] + " " + data['name'];
-    console.log(document.querySelector("#text34").innerHTML);
+    //console.log(document.querySelector("#text34").innerHTML);
   })
   .catch((error) => {
           // This is where you handle errors.
@@ -168,7 +166,7 @@ function changeVers(){
   idAddActive = "#text" + cpt;
   cptVerticals = parseInt(cpt) + 33;
 
-  console.log(idAddActive);
+  //console.log(idAddActive);
   document.querySelector(idAddActive).classList.add("active");
   if(cpt < 34 && cptVerticals < 66){
     idAddActiveBg = "#bgtext" + cpt;
@@ -192,8 +190,8 @@ function play() {
   idAddActiveBgHorizontal = "#bgtext" + (cpt - 2);
 
   idAddActiveBgVertical = "#bgtext" + (parseInt(cpt) + 31);
-  console.log(idAddActiveBgHorizontal);
-  console.log(idAddActiveBgVertical);
+  //console.log(idAddActiveBgHorizontal);
+  //console.log(idAddActiveBgVertical);
 
 
   window.requestAnimationFrame(function(time) {
@@ -217,10 +215,10 @@ function placeVertical () {
 
   cpt = document.querySelector("#cpt").innerHTML;
   idAddActiveBg = "#bgtext" + (parseInt(cpt)+31) ;  //index cpt - 2 + 33 to get the vertical texts spans ids
-  console.log(idAddActiveBg);
+  //console.log(idAddActiveBg);
   text = document.querySelector(idAddActiveBg) ;
   text.style.left = getRandomVertical(0,93) + '%';
-  console.log(text.style.left);
+  //console.log(text.style.left);
 }
 
 

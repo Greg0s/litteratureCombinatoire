@@ -24,9 +24,6 @@ $(document).ready(function(){
     })
 });
 
-// var choice1 = document.querySelector(".choice1");
-// choice1.onclick = getNextText(choice1.id);
-
 function getRandomTale(){
     url = routeUrl + '/tale';
     fetch(url)
@@ -152,18 +149,6 @@ function getTextChoices(id_text, choice_num){
     });
     
 }
-
-// function getNextText(choice){
-//     if(choice == 0){
-//         id = document.querySelector('.choice0').id.slice(-1);
-//     }else{
-//         id = document.querySelector('.choice1').id.slice(-1);
-//     }
-//     //console.log(id);
-//     getTaleText(id);
-//     getTextChoices(id, 0);
-//     getTextChoices(id, 1);
-// }
 
 function getNextText(idName){
     let htmlId = '#' + idName;

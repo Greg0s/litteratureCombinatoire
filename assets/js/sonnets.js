@@ -23,11 +23,11 @@ $(document).ready(function(){
     document.addEventListener('click', function() {
         if (mode == "keep") {
             keepVerse(parseInt((document.activeElement.id.slice(-2)).split('e').join("")));
-            console.log((document.activeElement.id.slice(-2)).split('e').join(""));
+            //console.log((document.activeElement.id.slice(-2)).split('e').join(""));
         }
         else {
             getRandomSonnet(parseInt((document.activeElement.id.slice(-2)).split('e').join("")));
-            console.log((document.activeElement.id.slice(-2)).split('e').join(""));
+            //console.log((document.activeElement.id.slice(-2)).split('e').join(""));
         }
     })
 });
@@ -44,7 +44,7 @@ function getRandomSonnet(num){
     })
     .then((data) => {// Handle what to do with the response.
             id = "#line" + num;
-            console.log(id)
+            //console.log(id)
             document.querySelector(id).innerHTML = data['text'];
     })
     .catch((error) => {// Handle errors.

@@ -3,23 +3,11 @@ $(document).ready(function() {
   const incrementCount = document.getElementById("button");
   cptClick = 0;
 
-  //reload next bristols in advance when clicking author
-  // const reload = document.getElementById("text35");
-  // reload.addEventListener('click', function(){
-  //   getRandomBristolSerie();
-  // })
-
-
   function restart(){
     document.querySelector("#text3").classList.remove('active');
     document.querySelector("#text0").classList.add('active');
     document.querySelector("#cpt").innerHTML = 1;
   }
-
-  // const restart = document.getElementById("text34");
-  // restart.onmouseover = function(){
-  //   restart.innerHTML = "Recommencer";
-  // }
 
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
   //~~~~~~~~~~~~~~~~~SOCKET INTERACTION~~~~~~~~~~~~~~~~~~~~~~~//
@@ -60,7 +48,7 @@ $(document).ready(function() {
 function changeText(){
   //get compteur
   cpt = document.querySelector("#cpt").innerHTML;
-  console.log(cpt);
+  //console.log(cpt);
   if(cpt == 1){
     document.querySelector("#text1").classList.add("active");
     document.querySelector("#text0").classList.remove("active");

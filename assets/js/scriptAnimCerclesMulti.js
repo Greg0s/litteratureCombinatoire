@@ -46,13 +46,13 @@ do{
     var color7=cercle7.style.background;
 }while( color7==color6 && color7==color5 && color7==color4 && color7==color3 && color7==color2 && color7==color1)
 
-console.log("cercle1: "+color1);
-console.log("cercle2: "+color2);
-console.log("cercle3: "+color3);
-console.log("cercle4: "+color4);
-console.log("cercle5: "+color5);
-console.log("cercle6: "+color6);
-console.log("cercle7: "+color7);
+// console.log("cercle1: "+color1);
+// console.log("cercle2: "+color2);
+// console.log("cercle3: "+color3);
+// console.log("cercle4: "+color4);
+// console.log("cercle5: "+color5);
+// console.log("cercle6: "+color6);
+// console.log("cercle7: "+color7);
 
 
 
