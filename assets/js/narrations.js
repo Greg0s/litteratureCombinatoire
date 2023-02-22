@@ -20,7 +20,7 @@ $(document).ready(function(){
 });
 
 function getRandomNarrationNewGroup(sameGroup){
-    url = 'http://localhost/narration';
+    url = routeUrl + '/narration';
     fetch(url)
     .then((response) => {
         if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
@@ -52,7 +52,7 @@ function getRandomNarrationNewGroup(sameGroup){
 
 function getNarrationText(num, id_narration){
     //console.log(group_num);
-    fetch('http://localhost/narration/text', { 'body': JSON.stringify({ 'num': num, 'id_narration': id_narration }), method: 'POST'})
+    fetch(routeUrl + '/narration/text', { 'body': JSON.stringify({ 'num': num, 'id_narration': id_narration }), method: 'POST'})
     .then((response) => {
         if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
                             // check for any errors.
@@ -77,7 +77,7 @@ function getNarrationText(num, id_narration){
 
 function getRandomNarration(num, group_num){
     //console.log(group_num);
-    fetch('http://localhost/narration/textGroup/' +  group_num)
+    fetch(routeUrl + '/narration/textGroup/' +  group_num)
     .then((response) => {
         if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
                             // check for any errors.
@@ -97,7 +97,7 @@ function getRandomNarration(num, group_num){
 }
 
 function getNarrationAuthorGroup(group_num){
-    url = 'http://localhost/narration/authorGroup/' + group_num;
+    url = routeUrl + '/narration/authorGroup/' + group_num;
     fetch(url)
     .then((response) => {
         if(!response.ok){ 
@@ -119,7 +119,7 @@ function getNarrationAuthorGroup(group_num){
 }
 
 function getNarrationAuthor(id_author, num){
-    fetch('http://localhost/narration/author/' + id_author)
+    fetch(routeUrl + '/narration/author/' + id_author)
     .then((response) => {
         if(!response.ok){ // Before parsing (i.e. decoding) the JSON data,
                             // check for any errors.

@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 
 function getRandomSonnet(num){
-    url = 'http://localhost/sonnet/' + num;
+    url = routeUrl + '/sonnet/' + num;
     fetch(url)
     .then((response) => {
         if(!response.ok){ 
