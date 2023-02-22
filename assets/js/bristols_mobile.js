@@ -25,7 +25,7 @@ $(document).ready(function() {
   //~~~~~~~~~~~~~~~~~SOCKET INTERACTION~~~~~~~~~~~~~~~~~~~~~~~//
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-  let socket = io.connect("http://localhost:5000");
+  let socket = io("https://combimac-ws.oulico.fr");
 
   const btn = document.querySelector("#button");
   const restartBtn = document.getElementById("text3");
