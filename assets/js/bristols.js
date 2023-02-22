@@ -50,7 +50,7 @@ $(document).ready(function() {
   //~~~~~~~~~~~~~~~~~SOCKET INTERACTION~~~~~~~~~~~~~~~~~~~~~~~//
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-  let socket = io("http://localhost:5000");
+  let socket = io("https://combimac-ws.oulico.fr");
 
   let btn = document.querySelector("#button");
 
