@@ -30,7 +30,6 @@ $(document).ready(function() {
   function restart(){
     getRandomBristolSerie();
     document.querySelectorAll('.active').forEach(element => {
-      console.log("removed");
       element.classList.remove('active');
     });
     document.querySelector("#text0").classList.add('active');
