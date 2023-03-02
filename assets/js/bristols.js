@@ -29,7 +29,10 @@ $(document).ready(function() {
 
   function restart(){
     getRandomBristolSerie();
-    document.querySelector("#text35").classList.remove('active');
+    document.querySelectorAll('.active').forEach(element => {
+      console.log("removed");
+      element.classList.remove('active');
+    });
     document.querySelector("#text0").classList.add('active');
     document.querySelector("#cpt").innerHTML = 1;
     
