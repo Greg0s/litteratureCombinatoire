@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMBIMAC - Bristols</title>
+    <link rel="stylesheet" href='../assets/css/header.css'>
+    <link rel="stylesheet" href='../assets/css/bristols.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script type="text/javascript" src="../assets/js/bristols.js"></script>
+    <script>
+        routeUrl = 'https://combimac-back.oulico.fr';
+    </script>
+</head>
+<body>
+<main>
+        <button id="button">
+            <!--Introduction-->
+            <span class="text active" id="text0">Mélangez les bristols</span>
+            <span class="text" id="text1"></span>
+            <span class="text" id="text2"></span>
+            <span class="text" id="text3"></span>
+            <span class="text" id="text4"></span>
+            <span class="text" id="text5"></span>
+            <span class="text" id="text6"></span>
+            <span class="text" id="text7"></span>
+            <span class="text" id="text8"></span>
+            <span class="text" id="text9"></span>
+            <span class="text" id="text10"></span>
+            <span class="text" id="text11"></span>
+            <span class="text" id="text12"></span>
+            <span class="text" id="text13"></span>
+            <span class="text" id="text14"></span>
+            <span class="text" id="text15"></span>
+            <span class="text" id="text16"></span>
+            <span class="text" id="text17"></span>
+            <span class="text" id="text18"></span>
+            <span class="text" id="text19"></span>
+            <span class="text" id="text20"></span>
+            <span class="text" id="text21"></span>
+            <span class="text" id="text22"></span>
+            <span class="text" id="text23"></span>
+            <span class="text" id="text24"></span>
+            <span class="text" id="text25"></span>
+            <span class="text" id="text26"></span>
+            <span class="text" id="text27"></span>
+            <span class="text" id="text28"></span>
+            <span class="text" id="text29"></span>
+            <span class="text" id="text30"></span>
+            <span class="text" id="text31"></span>
+            <span class="text" id="text32"></span>
+            <span class="text" id="text33"></span>
+            <!--Author-->
+            <span class="text" id="text34"></span>
+            <!--Restart-->
+            <span class="text" id="text35">Recommencer</span>
+        </button>
+        <span id="cpt"></span>
+
+
+        
+            <span class="bgTextHorizontal" id="bgtext1"></span>
+            <span class="bgTextHorizontal" id="bgtext2"></span>
+            <span class="bgTextHorizontal" id="bgtext3"></span>
+            <span class="bgTextHorizontal" id="bgtext4"></span>
+            <span class="bgTextHorizontal" id="bgtext5"></span>
+            <span class="bgTextHorizontal" id="bgtext6"></span>
+            <span class="bgTextHorizontal" id="bgtext7"></span>
+            <span class="bgTextHorizontal" id="bgtext8"></span>
+            <span class="bgTextHorizontal" id="bgtext9"></span>
+            <span class="bgTextHorizontal" id="bgtext10"></span>
+            <span class="bgTextHorizontal" id="bgtext11"></span>
+            <span class="bgTextHorizontal" id="bgtext12"></span>
+            <span class="bgTextHorizontal" id="bgtext13"></span>
+            <span class="bgTextHorizontal" id="bgtext14"></span>
+            <span class="bgTextHorizontal" id="bgtext15"></span>
+            <span class="bgTextHorizontal" id="bgtext16"></span>
+            <span class="bgTextHorizontal" id="bgtext17"></span>
+            <span class="bgTextHorizontal" id="bgtext18"></span>
+            <span class="bgTextHorizontal" id="bgtext19"></span>
+            <span class="bgTextHorizontal" id="bgtext20"></span>
+            <span class="bgTextHorizontal" id="bgtext21"></span>
+            <span class="bgTextHorizontal" id="bgtext22"></span>
+            <span class="bgTextHorizontal" id="bgtext23"></span>
+            <span class="bgTextHorizontal" id="bgtext24"></span>
+            <span class="bgTextHorizontal" id="bgtext25"></span>
+            <span class="bgTextHorizontal" id="bgtext26"></span>
+            <span class="bgTextHorizontal" id="bgtext27"></span>
+            <span class="bgTextHorizontal" id="bgtext28"></span>
+            <span class="bgTextHorizontal" id="bgtext29"></span>
+            <span class="bgTextHorizontal" id="bgtext30"></span>
+            <span class="bgTextHorizontal" id="bgtext31"></span>
+            <span class="bgTextHorizontal" id="bgtext32"></span>
+            <span class="bgTextHorizontal" id="bgtext33"></span>
+        
+
+        <div class="container">
+            <span class="bgTextVertical" id="bgtext34"></span>
+            <span class="bgTextVertical" id="bgtext35"></span>
+            <span class="bgTextVertical" id="bgtext36"></span>
+            <span class="bgTextVertical" id="bgtext37"></span>
+            <span class="bgTextVertical" id="bgtext38"></span>
+            <span class="bgTextVertical" id="bgtext39"></span>
+            <span class="bgTextVertical" id="bgtext40"></span>
+            <span class="bgTextVertical" id="bgtext41"></span>
+            <span class="bgTextVertical" id="bgtext42"></span>
+            <span class="bgTextVertical" id="bgtext43"></span>
+            <span class="bgTextVertical" id="bgtext44"></span>
+            <span class="bgTextVertical" id="bgtext45"></span>
+            <span class="bgTextVertical" id="bgtext46"></span>
+            <span class="bgTextVertical" id="bgtext47"></span>
+            <span class="bgTextVertical" id="bgtext48"></span>
+            <span class="bgTextVertical" id="bgtext49"></span>
+            <span class="bgTextVertical" id="bgtext50"></span>
+            <span class="bgTextVertical" id="bgtext51"></span>
+            <span class="bgTextVertical" id="bgtext52"></span>
+            <span class="bgTextVertical" id="bgtext53"></span>
+            <span class="bgTextVertical" id="bgtext54"></span>
+            <span class="bgTextVertical" id="bgtext55"></span>
+            <span class="bgTextVertical" id="bgtext56"></span>
+            <span class="bgTextVertical" id="bgtext57"></span>
+            <span class="bgTextVertical" id="bgtext58"></span>
+            <span class="bgTextVertical" id="bgtext59"></span>
+            <span class="bgTextVertical" id="bgtext60"></span>
+            <span class="bgTextVertical" id="bgtext61"></span>
+            <span class="bgTextVertical" id="bgtext62"></span>
+            <span class="bgTextVertical" id="bgtext63"></span>
+            <span class="bgTextVertical" id="bgtext64"></span>
+            <span class="bgTextVertical" id="bgtext65"></span>
+            <span class="bgTextVertical" id="bgtext66"></span>
+        </div>
+
+
+
+        </div> 
+
+</main>
+<!-- <footer></footer> onclick= "handleIncrement()"-->
+</body>
+</html>
