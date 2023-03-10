@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Générateur de poèmes combinatoires</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="title">Textes Combinatoires</h2>
+        <nav id="menu" class="menu">
+            <div class="button-wrap" id="btn-charge">
+                <label class="txt-btn-charge" for="upload">Charger des fichiers</label>
+                <input id="upload" onchange="loadFile(this)" type="file" multiple="multiple">
+            </div>
+            <button id="btn-elements">Vider la mémoire</button>
+            <button id="btn-history">Vider l'historique</button>
+            <button id="help">Guide d'utilisation</button>
+        </nav>
+    </header>
+    <div id="content" class="content">
+        <p id="poem" class="texte"></p>
+        <input type="button" class="btn" id="myBtn" value="Générer">
+    </div>
+   <!--<div id="menu">-->
+    <div class="div-list">
+        <h3>Fichiers Chargés</h3>
+        <ol id="elements"></ol>
+    </div>
+    <div class="div-list">
+        <h3>Historique</h3>
+        <ol id="history"></ol>
+    </div>
+<!--</div>-->
+<!---Modal-->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h2 id="title"></h2>
+        <span class="close"></span>
+        <p id="contentModal"></p>
+        <div class="up">
+            <input type="button" id="rename" class="btn" value="Renommer">
+            <input type="button" id="delete" class="btn" value="Supprimer">
+            <input type="button" id="export" class="btn" value="Exporter">
+        </div>
+    </div>
+</div>
+<div id = "modals"></div>
+
+<footer>
+    <p>© 2022 - Eliès Billotta - Lou Bonafé</p>
+</footer>
+<script src="scripts/main.js"></script>
+<script src="scripts/FileSaver.js"></script>
+</body>
+
+</html>
