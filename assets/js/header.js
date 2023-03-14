@@ -9,7 +9,7 @@ document.write(`
         <a href="../index.html" class="logo">CoMBIMaC</a>
         <navbar>
             <div class="dropbtn">Littérature & combinatoire
-                <img class="underDropbtn" src="../assets/svg/arrowUp.svg"/>
+                <img alt="Flèche sous-menu" class="underDropbtn" src="../assets/svg/arrowUp.svg"/>
             </div>
 
             <a class="navlink" href="./expo.html">Exposition</a>
@@ -25,19 +25,19 @@ document.write(`
                 <a class="navlink-mobile" href="./sonnets_explanations.html">Sonnets</a>
             </div>
             <a href="#" id="openBtnMobile">
-                <img class="arrow-down" alt="Open dropdown mobile menu" src="../assets/svg/arrowDown.svg"/>
+                <img alt="Bouton ouvrir sous-menu déroulant mobile" class="arrow-down" alt="Open dropdown mobile menu" src="../assets/svg/arrowDown.svg"/>
             </a>
             <a href="#" id="closeBtnMobile">
-                <img class="arrow-up" alt="Close dropdown mobile menu" src="../assets/svg/arrowUp.svg"/>
+                <img alt="Bouton fermer sous-menu déroulant mobile" class="arrow-up" alt="Close dropdown mobile menu" src="../assets/svg/arrowUp.svg"/>
             </a>
             <a class="navlink-mobile" href="./expo.html">Exposition</a>
             <a class="navlink-mobile" href="./creations.html">Créations</a>
           </div> 
           <a href="#" id="openBtn">
-            <img class="burger-icon icon" alt="Open mobile menu" src="../assets/svg/hamburger.svg"/>
+            <img alt="Bouton ouvrir menu mobile" class="burger-icon icon" alt="Open mobile menu" src="../assets/svg/hamburger.svg"/>
           </a>
           <a href="#" id="closeBtn">
-            <img class="cross-icon icon" alt="Close mobile menu" src="../assets/svg/cross.svg"/>
+            <img alt="Bouton fermer menu mobile" class="cross-icon icon" alt="Close mobile menu" src="../assets/svg/cross.svg"/>
           </a>
     </div>
     <div class="secondBar">
