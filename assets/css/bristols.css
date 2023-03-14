@@ -124,7 +124,7 @@ button:hover {
 
   @keyframes scrollVerticalTxt {
     0%{
-        transform : translateY(50vh) rotate(-90deg);
+        transform : translateY(100vh) rotate(-90deg);
     }
     100%{
         transform : translateY(-150vh) rotate(-90deg);
