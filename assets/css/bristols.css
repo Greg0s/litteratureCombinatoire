@@ -127,6 +127,6 @@ button:hover {
         transform : translateY(75vh) rotate(-90deg);
     }
     100%{
-        transform : translateY(-150vh) rotate(-90deg);
+        transform : translateY(-175vh) rotate(-90deg);
     }
   }
