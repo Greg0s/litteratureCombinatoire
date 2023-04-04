@@ -154,8 +154,9 @@ function getNextText(idName){
     let htmlId = '#' + idName;
     //console.log(htmlId);
     //to manage 2 digits id
-    id = document.querySelector(htmlId).id.slice(-2);
+    id = document.querySelector(htmlId).id.slice(-3);
     id = id.split('_').join("");
+    id = id.split('t').join("");
     //console.log(id);
 
     getTaleText(id);
